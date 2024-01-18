@@ -24,6 +24,8 @@ func main() {
 	err = home().Render(context.Background(), f)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
+	} else {
+		log.Printf("created output in %s", outputDir)
 	}
 
 }

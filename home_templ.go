@@ -22,16 +22,91 @@ func home() templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<div>")
+		err = header().Render(ctx, templBuffer)
 		if err != nil {
 			return err
 		}
-		var_2 := `Woah`
+		_, err = templBuffer.WriteString("<body><main class=\"flex-col justify-center text-center font-medium font-mono\"><div class=\"flex flex-col justify-center items-center h-screen w-full\"><div class=\"space-y-4\"><div class=\"text-2xl text-gray-800\">")
+		if err != nil {
+			return err
+		}
+		var_2 := `Hey, I'm Greg`
 		_, err = templBuffer.WriteString(var_2)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div>")
+		_, err = templBuffer.WriteString("</div><div class=\"text-gray-600\">")
+		if err != nil {
+			return err
+		}
+		var var_3 string = "{ a software developer, football player, hobby fpv drone pilot } "
+		_, err = templBuffer.WriteString(templ.EscapeString(var_3))
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div><div class=\"text-gray-600\">")
+		if err != nil {
+			return err
+		}
+		var var_4 string = "{ based in Christchurch, New Zealand } "
+		_, err = templBuffer.WriteString(templ.EscapeString(var_4))
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div><div class=\"text-gray-700 text-lg\">")
+		if err != nil {
+			return err
+		}
+		var_5 := `Open to new software development opportunities.`
+		_, err = templBuffer.WriteString(var_5)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" ")
+		if err != nil {
+			return err
+		}
+		var_6 := `I thrive in fast-paced, high-trust environments, with a clear path to having a big impact and everyone moving in the same direction.`
+		_, err = templBuffer.WriteString(var_6)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" ")
+		if err != nil {
+			return err
+		}
+		var_7 := `Only considering fully/mostly remote roles.`
+		_, err = templBuffer.WriteString(var_7)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" <div class=\"grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6\"><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"/dev/nzcovidmap\"><img class=\"h-16 w-16 rounded-md\" alt=\"Locations of Interest Explorer Icon\" src=\"/_next/image?url=%2Ficons%2Fcovid19%2Ficon-512x512.png&amp;amp;256≈256≈25256≈6≈256≈q=75\"><span class=\"ml-2 text-xl underline\">")
+		if err != nil {
+			return err
+		}
+		var_8 := `NZCovidMap`
+		_, err = templBuffer.WriteString(var_8)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</span></a><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"/about\"><span class=\"text-xl underline\">")
+		if err != nil {
+			return err
+		}
+		var_9 := `About`
+		_, err = templBuffer.WriteString(var_9)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</span></a></div></div></div></div><div class=\"space-y-4 w-full h-screen\">")
+		if err != nil {
+			return err
+		}
+		err = nzcovidmap().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div><div class=\"space-y-4 w-full h-screen\"></div></main></body>")
 		if err != nil {
 			return err
 		}
