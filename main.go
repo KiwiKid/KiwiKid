@@ -16,7 +16,7 @@ func main() {
 		}
 	}
 
-	f, err := os.Create(outputDir + "/home.html")
+	f, err := os.Create(outputDir + "/index.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
 	}
