@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	outputDir := "./output"
+	outputDir := "./docs"
 
 	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
 		err := os.MkdirAll(outputDir, 0755) // 0755 is a common permission setting (read and execute access for everyone, full access for the owner)
