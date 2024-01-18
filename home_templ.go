@@ -80,7 +80,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString(" <div class=\"grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6\"><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"/dev/nzcovidmap\"><img class=\"h-16 w-16 rounded-md\" alt=\"Locations of Interest Explorer Icon\" src=\"/_next/image?url=%2Ficons%2Fcovid19%2Ficon-512x512.png&amp;amp;256≈256≈25256≈6≈256≈q=75\"><span class=\"ml-2 text-xl underline\">")
+		_, err = templBuffer.WriteString(" <div class=\"grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6\"><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"#nzcovidmap\"><img class=\"h-16 w-16 rounded-md\" alt=\"Locations of Interest Explorer Icon\" src=\"/_next/image?url=%2Ficons%2Fcovid19%2Ficon-512x512.png&amp;amp;256≈256≈25256≈6≈256≈q=75\"><span class=\"ml-2 text-xl underline\">")
 		if err != nil {
 			return err
 		}
@@ -89,7 +89,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span></a><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"/about\"><span class=\"text-xl underline\">")
+		_, err = templBuffer.WriteString("</span></a><a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"#about\"><span class=\"text-xl underline\">")
 		if err != nil {
 			return err
 		}
@@ -98,7 +98,7 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span></a></div></div></div></div><div class=\"space-y-4 w-full h-screen\">")
+		_, err = templBuffer.WriteString("</span></a></div></div></div></div><div id=\"nzcovidmap\" class=\"space-y-4 w-full h-screen\">")
 		if err != nil {
 			return err
 		}
@@ -106,7 +106,15 @@ func home() templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div><div class=\"space-y-4 w-full h-screen\"></div></main></body>")
+		_, err = templBuffer.WriteString("</div><div id=\"about\" class=\"space-y-4 w-full h-screen\">")
+		if err != nil {
+			return err
+		}
+		err = about().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div></main></body>")
 		if err != nil {
 			return err
 		}
