@@ -96,79 +96,93 @@ func nzcovidmap() templ.Component {
 			if err != nil {
 				return err
 			}
+			_, err = templBuffer.WriteString(" ")
+			if err != nil {
+				return err
+			}
+			var_9 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+				templBuffer, templIsBuffer := w.(*bytes.Buffer)
+				if !templIsBuffer {
+					templBuffer = templ.GetBuffer()
+					defer templ.ReleaseBuffer(templBuffer)
+				}
+				_, err = templBuffer.WriteString("<ul class=\"list-inside list-disc\"><li>")
+				if err != nil {
+					return err
+				}
+				var_10 := `Provide a Mobile-friendly view of Locations of Interest`
+				_, err = templBuffer.WriteString(var_10)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li><li>")
+				if err != nil {
+					return err
+				}
+				var_11 := `Raise awareness of Locations of Interests in our community.`
+				_, err = templBuffer.WriteString(var_11)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li><li>")
+				if err != nil {
+					return err
+				}
+				var_12 := `Lower anxiety for those seeking updates about their community.`
+				_, err = templBuffer.WriteString(var_12)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li></ul> <h1>")
+				if err != nil {
+					return err
+				}
+				var_13 := `Tech`
+				_, err = templBuffer.WriteString(var_13)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</h1> <ul class=\"list-inside list-disc\"><li>")
+				if err != nil {
+					return err
+				}
+				var_14 := `A Mobile-friendly map view for digesting localized information`
+				_, err = templBuffer.WriteString(var_14)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li><li>")
+				if err != nil {
+					return err
+				}
+				var_15 := `Up-to-date social Media sharing icons created for each town/city`
+				_, err = templBuffer.WriteString(var_15)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li><li>")
+				if err != nil {
+					return err
+				}
+				var_16 := `Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit`
+				_, err = templBuffer.WriteString(var_16)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</li></ul>")
+				if err != nil {
+					return err
+				}
+				if !templIsBuffer {
+					_, err = io.Copy(w, templBuffer)
+				}
+				return err
+			})
+			err = subbox("Goals").Render(templ.WithChildren(ctx, var_9), templBuffer)
+			if err != nil {
+				return err
+			}
 			_, err = templBuffer.WriteString(" <div class=\"font-bold rounded-lg border shadow-lg p-10 h-screen\"><h1>")
-			if err != nil {
-				return err
-			}
-			var_9 := `The goals were:`
-			_, err = templBuffer.WriteString(var_9)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><li>")
-			if err != nil {
-				return err
-			}
-			var_10 := `Provide a Mobile-friendly view of Locations of Interest`
-			_, err = templBuffer.WriteString(var_10)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_11 := `Raise awareness of Locations of Interests in our community.`
-			_, err = templBuffer.WriteString(var_11)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_12 := `Lower anxiety for those seeking updates about their community.`
-			_, err = templBuffer.WriteString(var_12)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li></ul><h1>")
-			if err != nil {
-				return err
-			}
-			var_13 := `Tech`
-			_, err = templBuffer.WriteString(var_13)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><li>")
-			if err != nil {
-				return err
-			}
-			var_14 := `A Mobile-friendly map view for digesting localized information`
-			_, err = templBuffer.WriteString(var_14)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_15 := `Up-to-date social Media sharing icons created for each town/city`
-			_, err = templBuffer.WriteString(var_15)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_16 := `Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit`
-			_, err = templBuffer.WriteString(var_16)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li></ul></div> <div class=\"font-bold rounded-lg border shadow-lg p-10 h-screen\"><h1>")
 			if err != nil {
 				return err
 			}

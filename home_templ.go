@@ -26,7 +26,15 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<body><main class=\"flex-col justify-center text-center font-medium font-mono items-center\"><div class=\"h-screen flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800\">")
+		_, err = templBuffer.WriteString("<body><main class=\"flex-col justify-center text-center font-medium font-mono items-center\">")
+		if err != nil {
+			return err
+		}
+		err = scrollTrack().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<div class=\"h-screen flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800\">")
 		if err != nil {
 			return err
 		}
@@ -53,7 +61,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div><div class=\"text-gray-700 text-lg\">")
+		_, err = templBuffer.WriteString("</div><div class=\"text-gray-700 text-lg mt-2\">")
 		if err != nil {
 			return err
 		}
@@ -177,12 +185,12 @@ func home(yearSince string) templ.Component {
 								backToTopButton.classList.add('hidden');
 							}
 						});
-				`
+			`
 		_, err = templBuffer.WriteString(var_13)
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</script></main></body>")
+		_, err = templBuffer.WriteString("</script><scroll-tracker></scroll-tracker></main></body>")
 		if err != nil {
 			return err
 		}
