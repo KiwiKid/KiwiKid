@@ -3,9 +3,10 @@ package main
 templ home(yearSince string) {
 	@header()
 	<body>
-		<main class="flex-col justify-center text-center font-medium font-mono">
-			<div class="h-screen overflow-scroll">
-				<div class="h-screen">
+		<main class="flex-col justify-center text-center font-medium font-mono items-center">
+
+			<div class="h-screen flex justify-center items-center">
+				<div class="text-center">
 					<div class="text-2xl text-gray-800">Hey, I'm Greg</div>
 					<div class="text-gray-600">
 						{ "{ a software developer, football player, hobby fpv drone pilot } " }
@@ -14,31 +15,46 @@ templ home(yearSince string) {
 						{ "{ based in Christchurch, New Zealand } " }
 					</div>
 					<div class="text-gray-700 text-lg">
-						Open to new software development opportunities.
-						I thrive in fast-paced, high-trust environments, with a clear path to having a big impact and everyone moving in the same direction.
+						Open to new software development opportunities...
 						Only considering fully/mostly remote roles.
-						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-							<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href="#nzcovidmap">
-								<img class="h-16 w-16 rounded-md" alt="Locations of Interest Explorer Icon" src="/_next/image?url=%2Ficons%2Fcovid19%2Ficon-512x512.png&amp;amp;256≈256≈25256≈6≈256≈q=75"/>
-								<span class="ml-2 text-xl underline">NZCovidMap</span>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+						@link("NZCovidMap", "#nzcovidmap")
+						@link("Me", "#intro")
+						<div class="flex flex-col justify-center border border-gray-300 rounded-md hover:bg-gray-100">
+							<a class="flex justify-center items-center h-10" href="#chchwaterreporter">
+								<span class="text-xl underline">ChCh Water Reporter</span>
 							</a>
-							<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href="#about">
-								<span class="text-xl underline">About</span>
-							</a>
-							<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href="#chchwaterreporter">
-								<span class="text-xl underline">ChCh Water Reporter<a href="https://chch-water-reporter.vercel.app" target="_">(live site)</a></span>
+							<a class="flex justify-center items-center h-10" href="https://chch-water-reporter.vercel.app" target="_">
+								<span class="text-sm underline">chch-water-reporter.vercel.app</span>
 							</a>
 						</div>
 					</div>
 				</div>
-			
-				@nzcovidmap()
-				<div id="about" class="min-h-screen">
-					@about(yearSince)
-				</div>
-					@chchWaterReporter()
 			</div>
-		</main>
+			<div id="about" class="min-h-screen">
+				@about(yearSince)
+			</div>
+			@nzcovidmap()
+			@chchWaterReporter()
+			<button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+					&#x2191;
+			</button>
+
+			<div style="height: 800px"></div>
+						<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center"> If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
+				<script>
+					const backToTopButton = document.getElementById('backToTop');
+
+						window.addEventListener('scroll', () => {
+							if (window.pageYOffset > 100) {
+								backToTopButton.classList.remove('hidden');
+							} else {
+								backToTopButton.classList.add('hidden');
+							}
+						});
+				</script>
+			</main>
 	</body>
 }
 

@@ -1,9 +1,8 @@
 package main
 
 templ nzcovidmap() {
-	<div id="nzcovidmap">
-		<div class="font-bold rounded-lg border shadow-lg p-10 h-screen">
-			<h1 class="text-4xl font-medium p-5">NZCovidMap</h1>
+		@box("NZCovidMap", "nzcovidmap"){
+			<div>
 			<p>Over the course of the pandemic, the NZCovidMap reached over 200,000 Kiwis across New Zealand, with a peak of 15,000 daily unique visitors. This tool provided people with a mobile-friendly view of Covid-19 Locations of Interest published by the Ministry of Health. As locations are found, the application automatically maintained Reddit posts for any new locations in relevant community subreddits. A creative circle-based location selection method allows the user to view the information for many locations in a specific area.</p>
 		</div>
 		<div class="flex justify-center">
@@ -37,6 +36,6 @@ templ nzcovidmap() {
 				<p>To reduce the complexity, cost and on-going maintenance cost of the application, the backend was deprecated in favor of directly pulling information from the MoH API. Recent improvements include generation of location-specific meta screenshots for engaging social media preview images.</p>
 			</ul>
 		</div>
-	</div>
+		}
 }
 
