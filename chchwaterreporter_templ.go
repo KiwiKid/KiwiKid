@@ -23,11 +23,11 @@ func chchWaterReporter() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"waterreporter\" class=\"scroll-m-[1rem]\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><a href=\"https://chch-water-reporter.vercel.app/\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"chchwaterreporter\" class=\"h-screen\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-5xl\"><a class=\"underline\" href=\"https://chch-water-reporter.vercel.app/\" target=\"_\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Var2 := `chch-water-reporter`
+		templ_7745c5c3_Var2 := `chch-water-reporter (live site)`
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var2)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
@@ -50,7 +50,16 @@ func chchWaterReporter() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Var5 := `[TODO: add more screen shots here]`
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ_7745c5c3_Var5)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <img src=\"./img/chch-reporting.PNG\"></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

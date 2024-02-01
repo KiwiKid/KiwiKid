@@ -4,8 +4,8 @@ templ home(yearSince string) {
 	@header()
 	<body>
 		<main class="flex-col justify-center text-center font-medium font-mono">
-			<div class="flex flex-col justify-center items-center h-screen w-full">
-				<div class="space-y-4">
+			<div class="h-screen overflow-scroll">
+				<div class="h-screen">
 					<div class="text-2xl text-gray-800">Hey, I'm Greg</div>
 					<div class="text-gray-600">
 						{ "{ a software developer, football player, hobby fpv drone pilot } " }
@@ -25,17 +25,19 @@ templ home(yearSince string) {
 							<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href="#about">
 								<span class="text-xl underline">About</span>
 							</a>
+							<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href="#chchwaterreporter">
+								<span class="text-xl underline">ChCh Water Reporter<a href="https://chch-water-reporter.vercel.app" target="_">(live site)</a></span>
+							</a>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="nzcovidmap" class="space-y-4 w-full h-screen">
+			
 				@nzcovidmap()
+				<div id="about" class="min-h-screen">
+					@about(yearSince)
+				</div>
+					@chchWaterReporter()
 			</div>
-			<div id="about" class="space-y-4 w-full h-screen">
-				@about(yearSince)
-			</div>
-			@chchWaterReporter()
 		</main>
 	</body>
 }

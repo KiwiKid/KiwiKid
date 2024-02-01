@@ -1,43 +1,41 @@
 package main
 
 templ nzcovidmap() {
-	<div>
-		<div class="text-left flex items-center justify-center h-screen gap-2 p-5 text-center font-medium font-mono grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-			<div class="font-bold rounded-lg border shadow-lg p-10">
-				<h1 class="text-4xl font-medium p-5">NZCovidMap</h1>
-				<p>Over the course of the pandemic, the NZCovidMap reached over 200,000 Kiwis across New Zealand, with a peak of 15,000 daily unique visitors. This tool provided people with a mobile-friendly view of Covid-19 Locations of Interest published by the Ministry of Health. As locations are found, the application automatically maintained Reddit posts for any new locations in relevant community subreddits. A creative circle-based location selection method allows the user to view the information for many locations in a specific area.</p>
-			</div>
-			<div class="flex justify-center">
-				<img class="rounded-lg shadow-lg" src="/_next/image?url=%2Fimg%2Fnzcovidmap%2Fnzcovid_2.jpg&amp;w=640&amp;q=75" alt="NZCovidMap Screenshot"/>
-				<!-- Additional images can be added similarly -->
-			</div>
-			<div class="font-bold rounded-lg border shadow-lg p-10">
-				<h1>The goals were:</h1>
-				<ul class="list-inside list-disc">
-					<li>Provide a Mobile-friendly view of Locations of Interest</li>
-					<li>Raise awareness of Locations of Interests in our community.</li>
-					<li>Lower anxiety for those seeking updates about their community.</li>
-				</ul>
-				<h1>Tech</h1>
-				<ul class="list-inside list-disc">
-					<li>A Mobile-friendly map view for digesting localized information</li>
-					<li>Up-to-date social Media sharing icons created for each town/city</li>
-					<li>Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit</li>
-				</ul>
-			</div>
+	<div id="nzcovidmap">
+		<div class="font-bold rounded-lg border shadow-lg p-10 h-screen">
+			<h1 class="text-4xl font-medium p-5">NZCovidMap</h1>
+			<p>Over the course of the pandemic, the NZCovidMap reached over 200,000 Kiwis across New Zealand, with a peak of 15,000 daily unique visitors. This tool provided people with a mobile-friendly view of Covid-19 Locations of Interest published by the Ministry of Health. As locations are found, the application automatically maintained Reddit posts for any new locations in relevant community subreddits. A creative circle-based location selection method allows the user to view the information for many locations in a specific area.</p>
+		</div>
+		<div class="flex justify-center">
+			<img class="rounded-lg shadow-lg" src="/_next/image?url=%2Fimg%2Fnzcovidmap%2Fnzcovid_2.jpg&amp;w=640&amp;q=75" alt="NZCovidMap Screenshot"/>
+			<!-- Additional images can be added similarly -->
+		</div>
+		<div class="font-bold rounded-lg border shadow-lg p-10 h-screen">
+			<h1>The goals were:</h1>
+			<ul class="list-inside list-disc">
+				<li>Provide a Mobile-friendly view of Locations of Interest</li>
+				<li>Raise awareness of Locations of Interests in our community.</li>
+				<li>Lower anxiety for those seeking updates about their community.</li>
+			</ul>
+			<h1>Tech</h1>
+			<ul class="list-inside list-disc">
+				<li>A Mobile-friendly map view for digesting localized information</li>
+				<li>Up-to-date social Media sharing icons created for each town/city</li>
+				<li>Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit</li>
+			</ul>
+		</div>
 
-			<div class="font-bold rounded-lg border shadow-lg p-10">
-				<h1>Inital Design</h1>
-				<ul class="list-inside list-disc">
-					<li>An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.</li>
-					<li>An n8n workflow endpoint that returns all the locations in the last 30 days.</li>
-					<li>A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.</li>
-				</ul>
-				<h1>Why so complex?</h1>
-				<ul class="list-inside list-disc">
-					<p>To reduce the complexity, cost and on-going maintenance cost of the application, the backend was deprecated in favor of directly pulling information from the MoH API. Recent improvements include generation of location-specific meta screenshots for engaging social media preview images.</p>
-				</ul>
-			</div>
+		<div class="font-bold rounded-lg border shadow-lg p-10 h-screen">
+			<h1>Inital Design</h1>
+			<ul class="list-inside list-disc">
+				<li>An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.</li>
+				<li>An n8n workflow endpoint that returns all the locations in the last 30 days.</li>
+				<li>A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.</li>
+			</ul>
+			<h1>Why so complex?</h1>
+			<ul class="list-inside list-disc">
+				<p>To reduce the complexity, cost and on-going maintenance cost of the application, the backend was deprecated in favor of directly pulling information from the MoH API. Recent improvements include generation of location-specific meta screenshots for engaging social media preview images.</p>
+			</ul>
 		</div>
 	</div>
 }

@@ -23,7 +23,7 @@ func about(yearSince string) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"mx-auto sm:w-4/5 max-w-5xl px-4 sm:px-6 lg:px-8\"><div class=\"w-full text-center py-6\"><div class=\"text-3xl text-center font-semibold\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"mx-auto sm:w-4/5 max-w-5xl px-4 sm:px-6 lg:px-8 min-h-screen\"><div class=\"w-full text-center py-6\"><div class=\"text-3xl text-center font-semibold\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
