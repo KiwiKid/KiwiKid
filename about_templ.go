@@ -218,7 +218,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_23 := `Go, C#, postgres, Tailwind, postgres, Next.js + Vercel, SQL, SQL Server, Node.js, New Relic, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Lambda, VSCode, Heroku, Entity Framework`
+			var_23 := `C#, postgres, Next.js + Vercel, SQL, Tailwind, BigQuery, SQL Server, Node.js, New Relic, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Lambda, VSCode, Heroku, Entity Framework`
 			_, err = templBuffer.WriteString(var_23)
 			if err != nil {
 				return err

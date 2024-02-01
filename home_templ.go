@@ -165,7 +165,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</button><div style=\"height: 800px\"></div><div class=\"py-4\"><div class=\"text-3xl text-center\"></div><div class=\"border border-black p-4\"><div class=\"text-center\">")
+		_, err = templBuffer.WriteString("</button><div style=\"height: 1600px\"></div><div class=\"py-4\"><div class=\"text-3xl text-center\"></div><div class=\"border border-black p-4\"><div class=\"text-center\">")
 		if err != nil {
 			return err
 		}
