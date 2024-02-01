@@ -1,6 +1,6 @@
 package main 
 
-templ about() {
+templ about(yearSince string) {
 	<div class="mx-auto sm:w-4/5 max-w-5xl px-4 sm:px-6 lg:px-8">
 		<div class="w-full text-center py-6">
 			<div class="text-3xl text-center font-semibold">Introduction</div>
@@ -8,7 +8,7 @@ templ about() {
 				<div class="w-full text-center py-2">
 					<p class="italic text-gray-600">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p>
 				</div>
-				<p class="mb-4 text-gray-700">I have been developing in a professional capacity as a full stack developer for over 10 years.</p>
+				<p class="mb-4 text-gray-700">I have been developing in a professional capacity as a full stack developer for over { yearSince } years.</p>
 				<p class="mb-4 text-gray-700">I have extensive experience in implementing complex software solutions, based on varying degrees of specification.</p>
 				<p class="mb-4 text-gray-700">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p>
 				<p class="mb-4 text-gray-700">I am passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p>
@@ -25,9 +25,6 @@ templ about() {
                 <div class="border border-black p-4 shadow-lg rounded-lg bg-white">
                     <div class="text-center font-medium text-gray-800">I love building and flying First-Person-View Quadcopters.</div>
                     <div class="text-center font-medium text-gray-800">(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)</div>
-                    
-                    <!-- Image and Iframe content here -->
-
                     <div class="italic text-center text-gray-600">Watch out for YouTube compression here!</div>
                     <div class="text-xl text-center font-medium text-gray-800">something more scenic....</div>
                     <div style="width: 800px;" class="m-auto">

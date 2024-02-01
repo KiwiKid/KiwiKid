@@ -25,7 +25,19 @@ templ nzcovidmap() {
 					<li>Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit</li>
 				</ul>
 			</div>
-			<!-- Additional content blocks can be structured similarly -->
+
+			<div class="font-bold rounded-lg border shadow-lg p-10">
+				<h1>Inital Design</h1>
+				<ul class="list-inside list-disc">
+					<li>An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.</li>
+					<li>An n8n workflow endpoint that returns all the locations in the last 30 days.</li>
+					<li>A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.</li>
+				</ul>
+				<h1>Why so complex?</h1>
+				<ul class="list-inside list-disc">
+					<p>To reduce the complexity, cost and on-going maintenance cost of the application, the backend was deprecated in favor of directly pulling information from the MoH API. Recent improvements include generation of location-specific meta screenshots for engaging social media preview images.</p>
+				</ul>
+			</div>
 		</div>
 	</div>
 }

@@ -1,9 +1,9 @@
 ```
 # Generate templates
-templ generate --watch
+templ generate && go run *.go
 
 # Output templates
-go run main.go
+
 ```
 
 
