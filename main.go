@@ -2,72 +2,81 @@ package main
 
 import (
 	"context"
+	"fmt"
+	"io"
 	"log"
 	"os"
-	"io"
-	"time"
-	"fmt"
 	"path/filepath"
+	"time"
 )
 
 const outputDir = "./docs"
 
 func main() {
-    outputDir := "./docs"
-    staticDir := "static"
+	outputDir := "./docs"
+	staticDir := "static"
 
-    if _, err := os.Stat(outputDir); os.IsNotExist(err) {
-        err := os.MkdirAll(outputDir, 0755)
-        if err != nil {
-            log.Fatalf("failed to create output directory: %v", err)
-        }
-    }
+	if _, err := os.Stat(outputDir); os.IsNotExist(err) {
+		err := os.MkdirAll(outputDir, 0755)
+		if err != nil {
+			log.Fatalf("failed to create output directory: %v", err)
+		}
+	}
 
-    f, err := os.Create(outputDir + "/index.html")
-    if err != nil {
-        log.Fatalf("failed to create output file: %v", err)
-    }
+	f, err := os.Create(outputDir + "/index.html")
+	if err != nil {
+		log.Fatalf("failed to create output file: %v", err)
+	}
 
-    err = home(yearsSinceStarted()).Render(context.Background(), f)
-    if err != nil {
-        log.Fatalf("failed to write output file: %v", err)
-    } else {
-        log.Printf("created output in %s", outputDir)
-    }
+	err = home(yearsSinceStarted()).Render(context.Background(), f)
+	if err != nil {
+		log.Fatalf("failed to write output file: %v", err)
+	} else {
+		log.Printf("created output in %s", outputDir)
+	}
 
-    err = filepath.Walk(staticDir, func(path string, info os.FileInfo, err error) error {
-        if err != nil {
-            return err
-        }
+	err = filepath.Walk(staticDir, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
 
-        // Skip the root 'static' directory itself
-        if path == staticDir {
-            return nil
-        }
+		// Skip the root 'static' directory itself
+		if path == staticDir {
+			return nil
+		}
 
-        // Create corresponding subdirectories in outputDir
-        if info.IsDir() {
-            return os.MkdirAll(filepath.Join(outputDir, filepath.Base(path)), 0755)
-        }
+		// Create corresponding subdirectories in outputDir
+		if info.IsDir() {
+			return os.MkdirAll(filepath.Join(outputDir, filepath.Base(path)), 0755)
+		}
 
-        // Copy files with relative path preservation
-        relPath, err := filepath.Rel(staticDir, path)
-        if err != nil {
-            return err
-        }
-        destPath := filepath.Join(outputDir, relPath)
-        return copyFile(path, destPath)
-    })
+		// Copy files with relative path preservation
+		relPath, err := filepath.Rel(staticDir, path)
+		if err != nil {
+			return err
+		}
+		destPath := filepath.Join(outputDir, relPath)
+		return copyFile(path, destPath)
+	})
 
-    if err != nil {
-        log.Fatalf("failed to copy static files: %v", err)
-    } else {
-        log.Printf("copied static files to %s", outputDir)
-    }
+	if err != nil {
+		log.Fatalf("failed to copy static files: %v", err)
+	} else {
+		fullPath, pathErr := filepath.Abs(outputDir)
+		if pathErr != nil {
+			log.Fatalf("failed to get path: %v", pathErr)
+		}
+		log.Printf(`✨ COMPLETE ✨ copied static files to %s
+
+Run:
+    
+    firefox %s/index.html
+
+to preview
+
+`, outputDir, fullPath)
+	}
 }
-
-
-
 
 func yearsSinceStarted() string {
 	// Define the start date.
@@ -89,26 +98,26 @@ func yearsSinceStarted() string {
 }
 
 func copyFile(src, dst string) error {
-    in, err := os.Open(src)
-    if err != nil {
-        return err
-    }
-    defer in.Close()
+	in, err := os.Open(src)
+	if err != nil {
+		return err
+	}
+	defer in.Close()
 
-    if err = os.MkdirAll(filepath.Dir(dst), 0755); err != nil {
-        return err
-    }
+	if err = os.MkdirAll(filepath.Dir(dst), 0755); err != nil {
+		return err
+	}
 
-    out, err := os.Create(dst)
-    if err != nil {
-        return err
-    }
-    defer out.Close()
+	out, err := os.Create(dst)
+	if err != nil {
+		return err
+	}
+	defer out.Close()
 
-    _, err = io.Copy(out, in)
-    if err != nil {
-        return err
-    }
+	_, err = io.Copy(out, in)
+	if err != nil {
+		return err
+	}
 
-    return out.Close()
+	return out.Close()
 }

@@ -4,7 +4,6 @@ templ home(yearSince string) {
 	@header()
 	<body>
 		<main class="flex-col justify-center text-center font-medium font-mono items-center">
-
 			<div class="h-screen flex justify-center items-center">
 				<div class="text-center">
 					<div class="text-2xl text-gray-800">Hey, I'm Greg</div>
@@ -19,7 +18,9 @@ templ home(yearSince string) {
 						Only considering fully/mostly remote roles.
 					</div>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-						@link("NZCovidMap", "#nzcovidmap")
+						@link("NZCovidMap", "#nzcovidmap") {
+							<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
+						}
 						@link("Me", "#intro")
 						<div class="flex flex-col justify-center border border-gray-300 rounded-md hover:bg-gray-100">
 							<a class="flex justify-center items-center h-10" href="#chchwaterreporter">
@@ -37,13 +38,12 @@ templ home(yearSince string) {
 			</div>
 			@nzcovidmap()
 			@chchWaterReporter()
-			<button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
-					&#x2191;
+			<button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;});">
+				&#x2191;
 			</button>
-
 			<div style="height: 800px"></div>
-						<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center"> If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
-				<script>
+			<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center">If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
+			<script>
 					const backToTopButton = document.getElementById('backToTop');
 
 						window.addEventListener('scroll', () => {
@@ -54,7 +54,7 @@ templ home(yearSince string) {
 							}
 						});
 				</script>
-			</main>
+		</main>
 	</body>
 }
 
