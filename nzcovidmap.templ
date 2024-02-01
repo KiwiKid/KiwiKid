@@ -21,32 +21,38 @@ templ nzcovidmap() {
 			<p>Each hour, the application would check for new locations in specific communities and (if a sub-reddit exists) posts for any new locations in a standard post format.</p>
 			<img src="./img/covid19/covid-reddit.png" class="rounded-lg shadow-lg" height="800px"/>
 		}
+		
 		@subbox("Goals") {
-			<ul class="list-inside list-disc">
-				<li>Provide a Mobile-friendly view of Locations of Interest</li>
-				<li>Raise awareness of Locations of Interests in our community.</li>
-				<li>Lower anxiety for those seeking updates about their community.</li>
-			</ul>
-			<h1>Tech</h1>
-			<ul class="list-inside list-disc">
-				<li>Up-to-date social Media sharing icons created for each town/city</li>
-			</ul>
+			<div class="flex">
+				<div>
+					<ul class="list-inside list-disc">
+						<li>Provide a Mobile-friendly view of Locations of Interest</li>
+						<li>Raise awareness of Locations of Interests in our community.</li>
+						<li>Lower anxiety for those seeking updates about their community.</li>
+					</ul>
+					<h1>Tech</h1>
+					<ul class="list-inside list-disc">
+						<li>Up-to-date social Media sharing icons created for each town/city</li>
+					</ul>
+					@subbox("Design") {
+						<ul class="list-inside list-disc">
+							<li>An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.</li>
+							<li>An n8n workflow endpoint that returns all the locations in the last 30 days.</li>
+							<li>A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.</li>
+							<li>A hourly job to build sub-reddit content and sent updates to places with new/updated Locations of Interest.</li>
+						</ul>
+						<h1>Why so complex?</h1>
+						<ul class="list-inside list-disc">
+							<p>To reduce the complexity, cost and on-going maintenance cost of the application, we removed the n8n workflow the Next.JS site build on and replaced it with direct calls to the MoH API.</p>
+							<p>This allowed the site to be fully independent of my own local infustructure and for its whole lifetime, run entirely for free on Vercel</p>
+						</ul>
+					}
+				</div>
+				<img src="./img/covid19/nzcovid_2.webp" class="rounded-lg shadow-lg" height="800px" />
+			</div>
+			
 		}
-		@subbox("Goals") {
-			<h1>Design</h1>
-			<ul class="list-inside list-disc">
-				<li>An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.</li>
-				<li>An n8n workflow endpoint that returns all the locations in the last 30 days.</li>
-				<li>A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.</li>
-				<li>A hourly job to build sub-reddit content and sent updates to places with new/updated Locations of Interest.</li>
-			</ul>
-			<h1>Why so complex?</h1>
-			<ul class="list-inside list-disc">
-				<p>To reduce the complexity, cost and on-going maintenance cost of the application, we removed the n8n workflow the Next.JS site build on and replaced it with direct calls to the MoH API.</p>
-				<p>This allowed the site to be fully independent of my own local infustructure and for its whole lifetime, run entirely for free on Vercel</p>
-			</ul>
-		</div>
-		}
+		
 	}
 
 }

@@ -124,7 +124,23 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</span></a></div></div></div></div><div id=\"about\" class=\"min-h-screen\">")
+		_, err = templBuffer.WriteString("</span></a></div>")
+		if err != nil {
+			return err
+		}
+		err = link("FPV", "#fpv").Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div></div></div>")
+		if err != nil {
+			return err
+		}
+		err = nzcovidmap().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<div id=\"about\" class=\"min-h-screen\">")
 		if err != nil {
 			return err
 		}
@@ -133,10 +149,6 @@ func home(yearSince string) templ.Component {
 			return err
 		}
 		_, err = templBuffer.WriteString("</div>")
-		if err != nil {
-			return err
-		}
-		err = nzcovidmap().Render(ctx, templBuffer)
 		if err != nil {
 			return err
 		}

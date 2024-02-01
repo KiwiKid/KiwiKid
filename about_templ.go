@@ -242,7 +242,7 @@ func about(yearSince string) templ.Component {
 				templBuffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templBuffer)
 			}
-			var_25 := `Luxury Escapes is one of the leading bradnb`
+			var_25 := `Luxury Escapes is one of the leading travel provider in Australia.....`
 			_, err = templBuffer.WriteString(var_25)
 			if err != nil {
 				return err
@@ -685,7 +685,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</div> <div class=\"italic text-center text-gray-600\">")
+			_, err = templBuffer.WriteString("</div> <img src=\"./img/atopthehill.webp\"> <div class=\"italic text-center text-gray-600\">")
 			if err != nil {
 				return err
 			}
@@ -694,7 +694,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</div> <div style=\"width: 1000px;\" class=\"m-auto\"><div style=\"width: 1000px; \" class=\"min-h-4\"><div style=\"width: 100%; height: 100%;\"><iframe allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" title=\"Measured Manoeuvres\" src=\"https://www.youtube.com/embed/fxbgoZZdHD4?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fgregc.dev&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1\" id=\"widget2\" width=\"100%\" height=\"100%\" frameborder=\"0\"></iframe></div></div></div> <div class=\"text-xl text-center font-medium text-gray-800\">")
+			_, err = templBuffer.WriteString("</div> <div class=\"m-auto\"><div style=\"width: 100dhv\" class=\"min-h-4\"><div style=\"width: 100%; height: 100%;\"><iframe allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" title=\"Measured Manoeuvres\" src=\"https://www.youtube.com/embed/fxbgoZZdHD4?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fgregc.dev&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;loop=1&amp;enablejsapi=1&amp;widgetid=1\" id=\"widget2\" width=\"100%\" height=\"100%\" frameborder=\"0\"></iframe></div></div></div> <div class=\"text-xl text-center font-medium text-gray-800\">")
 			if err != nil {
 				return err
 			}
@@ -703,7 +703,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</div> <div style=\"width: 1000px;\" class=\"m-auto\"><div style=\"width: 1000px; \" class=\"min-h-4\"><div style=\"width: 100%; height: 100%;\"><iframe frameborder=\"0\" allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" title=\"Arthur&#39;s Pass\" width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/CaHXT2S6gJA?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fgregc.dev&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;loop=1&amp;enablejsapi=1&amp;widgetid=3\" id=\"widget4\"></iframe></div></div></div>")
+			_, err = templBuffer.WriteString("</div> <div class=\"m-auto\"><div style=\"width: 100dhv\" class=\"min-h-4\"><div style=\"width: 100%; height: 100%;\"><iframe frameborder=\"0\" allowfullscreen=\"\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" title=\"Arthur&#39;s Pass\" width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/CaHXT2S6gJA?autoplay=0&amp;mute=0&amp;controls=0&amp;origin=https%3A%2F%2Fgregc.dev&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=true&amp;loop=1&amp;enablejsapi=1&amp;widgetid=3\" id=\"widget4\"></iframe></div></div></div>")
 			if err != nil {
 				return err
 			}

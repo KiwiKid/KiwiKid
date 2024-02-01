@@ -8,6 +8,7 @@ templ scrollTrack() {
 	<script>
         class ScrollTracker extends HTMLElement {
         constructor() {
+            console.log('ScrollTracker')
             super();
             this.attachShadow({ mode: 'open' });
             this.shadowRoot.appendChild(

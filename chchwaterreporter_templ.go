@@ -37,7 +37,7 @@ func chchWaterReporter() templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</a> ")
+			_, err = templBuffer.WriteString("</a>")
 			if err != nil {
 				return err
 			}
@@ -55,7 +55,7 @@ func chchWaterReporter() templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</div> ")
+			_, err = templBuffer.WriteString("</div><img src=\"./img/chch-reporting.PNG\" height=\"898\"> ")
 			if err != nil {
 				return err
 			}
@@ -64,7 +64,7 @@ func chchWaterReporter() templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString(" <img src=\"./img/chch-reporting.PNG\" height=\"898\"></div></div>")
+			_, err = templBuffer.WriteString("</div></div>")
 			if err != nil {
 				return err
 			}

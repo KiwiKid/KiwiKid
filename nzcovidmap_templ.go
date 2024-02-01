@@ -37,38 +37,56 @@ func nzcovidmap() templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</p><p>")
+			_, err = templBuffer.WriteString("</p><ul><li>")
 			if err != nil {
 				return err
 			}
-			var_4 := `- circle-based location selection method.`
+			var_4 := `- Circle-based location selection method`
 			_, err = templBuffer.WriteString(var_4)
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</p><p>")
+			_, err = templBuffer.WriteString("</li><li>")
 			if err != nil {
 				return err
 			}
-			var_5 := `- Location specific url pathing query params + "share link to location"`
+			var_5 := `A Mobile-friendly map view for digesting localized information`
 			_, err = templBuffer.WriteString(var_5)
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</p><p>")
+			_, err = templBuffer.WriteString("</li><li>")
 			if err != nil {
 				return err
 			}
-			var_6 := `- Live Meta image generation via self-referencing screenshot api `
+			var_6 := `- Location specific url pathing query params + "share link to location"`
 			_, err = templBuffer.WriteString(var_6)
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</p></div> <div class=\"flex justify-center\"><img class=\"rounded-lg shadow-lg\" src=\"./img/covid19/covid_desktop.webp\" alt=\"NZCovidMap Screenshot\"></div> ")
+			_, err = templBuffer.WriteString("</li><li>")
 			if err != nil {
 				return err
 			}
-			var_7 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_7 := `- Generation of location-specific meta screenshots for engaging social media preview images.`
+			_, err = templBuffer.WriteString(var_7)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString("</li><li>")
+			if err != nil {
+				return err
+			}
+			var_8 := `Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit`
+			_, err = templBuffer.WriteString(var_8)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString("</li></ul></div> <div class=\"flex justify-center\"><img class=\"rounded-lg shadow-lg\" src=\"./img/covid19/covid_desktop.webp\" alt=\"NZCovidMap Screenshot\"></div> ")
+			if err != nil {
+				return err
+			}
+			var_9 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
@@ -78,8 +96,8 @@ func nzcovidmap() templ.Component {
 				if err != nil {
 					return err
 				}
-				var_8 := `Each hour, the application would check for new locations in specific communities and (if a sub-reddit exists) posts for any new locations in a standard post format.`
-				_, err = templBuffer.WriteString(var_8)
+				var_10 := `Each hour, the application would check for new locations in specific communities and (if a sub-reddit exists) posts for any new locations in a standard post format.`
+				_, err = templBuffer.WriteString(var_10)
 				if err != nil {
 					return err
 				}
@@ -92,7 +110,7 @@ func nzcovidmap() templ.Component {
 				}
 				return err
 			})
-			err = subbox("Auto updates").Render(templ.WithChildren(ctx, var_7), templBuffer)
+			err = subbox("Auto updates").Render(templ.WithChildren(ctx, var_9), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -100,71 +118,53 @@ func nzcovidmap() templ.Component {
 			if err != nil {
 				return err
 			}
-			var_9 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_11 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				_, err = templBuffer.WriteString("<ul class=\"list-inside list-disc\"><li>")
+				_, err = templBuffer.WriteString("<div class=\"flex\"><div><ul class=\"list-inside list-disc\"><li>")
 				if err != nil {
 					return err
 				}
-				var_10 := `Provide a Mobile-friendly view of Locations of Interest`
-				_, err = templBuffer.WriteString(var_10)
-				if err != nil {
-					return err
-				}
-				_, err = templBuffer.WriteString("</li><li>")
-				if err != nil {
-					return err
-				}
-				var_11 := `Raise awareness of Locations of Interests in our community.`
-				_, err = templBuffer.WriteString(var_11)
-				if err != nil {
-					return err
-				}
-				_, err = templBuffer.WriteString("</li><li>")
-				if err != nil {
-					return err
-				}
-				var_12 := `Lower anxiety for those seeking updates about their community.`
+				var_12 := `Provide a Mobile-friendly view of Locations of Interest`
 				_, err = templBuffer.WriteString(var_12)
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</li></ul> <h1>")
+				_, err = templBuffer.WriteString("</li><li>")
 				if err != nil {
 					return err
 				}
-				var_13 := `Tech`
+				var_13 := `Raise awareness of Locations of Interests in our community.`
 				_, err = templBuffer.WriteString(var_13)
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</h1> <ul class=\"list-inside list-disc\"><li>")
+				_, err = templBuffer.WriteString("</li><li>")
 				if err != nil {
 					return err
 				}
-				var_14 := `A Mobile-friendly map view for digesting localized information`
+				var_14 := `Lower anxiety for those seeking updates about their community.`
 				_, err = templBuffer.WriteString(var_14)
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</li><li>")
+				_, err = templBuffer.WriteString("</li></ul><h1>")
 				if err != nil {
 					return err
 				}
-				var_15 := `Up-to-date social Media sharing icons created for each town/city`
+				var_15 := `Tech`
 				_, err = templBuffer.WriteString(var_15)
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</li><li>")
+				_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><li>")
 				if err != nil {
 					return err
 				}
-				var_16 := `Reddit Integration - Auto-Generate a "Location of Interest summary" for each subreddit & share relevant subreddit`
+				var_16 := `Up-to-date social Media sharing icons created for each town/city`
 				_, err = templBuffer.WriteString(var_16)
 				if err != nil {
 					return err
@@ -173,70 +173,98 @@ func nzcovidmap() templ.Component {
 				if err != nil {
 					return err
 				}
+				var_17 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+					templBuffer, templIsBuffer := w.(*bytes.Buffer)
+					if !templIsBuffer {
+						templBuffer = templ.GetBuffer()
+						defer templ.ReleaseBuffer(templBuffer)
+					}
+					_, err = templBuffer.WriteString("<ul class=\"list-inside list-disc\"><li>")
+					if err != nil {
+						return err
+					}
+					var_18 := `An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.`
+					_, err = templBuffer.WriteString(var_18)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</li><li>")
+					if err != nil {
+						return err
+					}
+					var_19 := `An n8n workflow endpoint that returns all the locations in the last 30 days.`
+					_, err = templBuffer.WriteString(var_19)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</li><li>")
+					if err != nil {
+						return err
+					}
+					var_20 := `A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.`
+					_, err = templBuffer.WriteString(var_20)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</li><li>")
+					if err != nil {
+						return err
+					}
+					var_21 := `A hourly job to build sub-reddit content and sent updates to places with new/updated Locations of Interest.`
+					_, err = templBuffer.WriteString(var_21)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</li></ul> <h1>")
+					if err != nil {
+						return err
+					}
+					var_22 := `Why so complex?`
+					_, err = templBuffer.WriteString(var_22)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</h1> <ul class=\"list-inside list-disc\"><p>")
+					if err != nil {
+						return err
+					}
+					var_23 := `To reduce the complexity, cost and on-going maintenance cost of the application, we removed the n8n workflow the Next.JS site build on and replaced it with direct calls to the MoH API.`
+					_, err = templBuffer.WriteString(var_23)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</p><p>")
+					if err != nil {
+						return err
+					}
+					var_24 := `This allowed the site to be fully independent of my own local infustructure and for its whole lifetime, run entirely for free on Vercel`
+					_, err = templBuffer.WriteString(var_24)
+					if err != nil {
+						return err
+					}
+					_, err = templBuffer.WriteString("</p></ul>")
+					if err != nil {
+						return err
+					}
+					if !templIsBuffer {
+						_, err = io.Copy(w, templBuffer)
+					}
+					return err
+				})
+				err = subbox("Design").Render(templ.WithChildren(ctx, var_17), templBuffer)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString("</div><img src=\"./img/covid19/nzcovid_2.webp\" class=\"rounded-lg shadow-lg\" height=\"800px\"></div>")
+				if err != nil {
+					return err
+				}
 				if !templIsBuffer {
 					_, err = io.Copy(w, templBuffer)
 				}
 				return err
 			})
-			err = subbox("Goals").Render(templ.WithChildren(ctx, var_9), templBuffer)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString(" <div class=\"font-bold rounded-lg border shadow-lg p-10 h-screen\"><h1>")
-			if err != nil {
-				return err
-			}
-			var_17 := `Inital Design`
-			_, err = templBuffer.WriteString(var_17)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><li>")
-			if err != nil {
-				return err
-			}
-			var_18 := `An n8n workflow that reads the CSV file published by the MoH. Locations are then categorized and saved.`
-			_, err = templBuffer.WriteString(var_18)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_19 := `An n8n workflow endpoint that returns all the locations in the last 30 days.`
-			_, err = templBuffer.WriteString(var_19)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li><li>")
-			if err != nil {
-				return err
-			}
-			var_20 := `A statically rendered Next.JS site that is published each hour. A mobile-friendly interactive map with all locations marked.`
-			_, err = templBuffer.WriteString(var_20)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</li></ul><h1>")
-			if err != nil {
-				return err
-			}
-			var_21 := `Why so complex?`
-			_, err = templBuffer.WriteString(var_21)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><p>")
-			if err != nil {
-				return err
-			}
-			var_22 := `To reduce the complexity, cost and on-going maintenance cost of the application, the backend was deprecated in favor of directly pulling information from the MoH API. Recent improvements include generation of location-specific meta screenshots for engaging social media preview images.`
-			_, err = templBuffer.WriteString(var_22)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString("</p></ul></div>")
+			err = subbox("Goals").Render(templ.WithChildren(ctx, var_11), templBuffer)
 			if err != nil {
 				return err
 			}
