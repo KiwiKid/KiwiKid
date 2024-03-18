@@ -114,7 +114,7 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Me", "intro").Render(templ.WithChildren(ctx, var_2), templBuffer)
+		err = box("Me", "intro", false).Render(templ.WithChildren(ctx, var_2), templBuffer)
 		if err != nil {
 			return err
 		}
@@ -214,7 +214,7 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Tech", "tech").Render(templ.WithChildren(ctx, var_12), templBuffer)
+		err = box("Tech", "tech", false).Render(templ.WithChildren(ctx, var_12), templBuffer)
 		if err != nil {
 			return err
 		}
@@ -224,8 +224,17 @@ func about(yearSince string) templ.Component {
 				templBuffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templBuffer)
 			}
-			var_23 := `Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top `
+			var_23 := `Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top travel providers.`
 			_, err = templBuffer.WriteString(var_23)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString(" ")
+			if err != nil {
+				return err
+			}
+			var_24 := `[WIP - adding details here]`
+			_, err = templBuffer.WriteString(var_24)
 			if err != nil {
 				return err
 			}
@@ -234,24 +243,24 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Luxury Escapes", "lux").Render(templ.WithChildren(ctx, var_22), templBuffer)
+		err = box("Luxury Escapes", "lux", true).Render(templ.WithChildren(ctx, var_22), templBuffer)
 		if err != nil {
 			return err
 		}
-		var_24 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		var_25 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 			templBuffer, templIsBuffer := w.(*bytes.Buffer)
 			if !templIsBuffer {
 				templBuffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templBuffer)
 			}
-			var_25 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_26 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_26 := `Streamliners manages several company platforms, including the largest, Healthpathways, which comprises of a responsive websites, publishing platform, and a shared administration and feedback system serving 30 million patients.`
-				_, err = templBuffer.WriteString(var_26)
+				var_27 := `Streamliners manages several company platforms, including the largest, Healthpathways, which comprises of a responsive websites, publishing platform, and a shared administration and feedback system serving 30 million patients.`
+				_, err = templBuffer.WriteString(var_27)
 				if err != nil {
 					return err
 				}
@@ -260,7 +269,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Background").Render(templ.WithChildren(ctx, var_25), templBuffer)
+			err = subbox("Background").Render(templ.WithChildren(ctx, var_26), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -268,14 +277,14 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_27 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_28 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_28 := `React, C#, .Net Core, ASP.NET Core Web APIs, Entity Framework, TeamCity, GitHub Actions, SQL, Unit Testing, Dependency Injection, ELK, ASP.NET Web Forms, AWS CDK + Range of AWS services including DynamoDB, Lambda, S3 etc`
-				_, err = templBuffer.WriteString(var_28)
+				var_29 := `React, C#, .Net Core, ASP.NET Core Web APIs, Entity Framework, TeamCity, GitHub Actions, SQL, Unit Testing, Dependency Injection, ELK, ASP.NET Web Forms, AWS CDK + Range of AWS services including DynamoDB, Lambda, S3 etc`
+				_, err = templBuffer.WriteString(var_29)
 				if err != nil {
 					return err
 				}
@@ -284,7 +293,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_27), templBuffer)
+			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_28), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -292,22 +301,13 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_29 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_30 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_30 := `Whilst at Streamliners, a major focus of the work has been a move towards a cloud-based microservice based architecture.`
-				_, err = templBuffer.WriteString(var_30)
-				if err != nil {
-					return err
-				}
-				_, err = templBuffer.WriteString(" ")
-				if err != nil {
-					return err
-				}
-				var_31 := `I've been really engaged by exploring the benefits and opportunities of serverless solutions for quickly developing really complex software solutions. Leading the design and implementation of these technologies gave me a first hand look at the advantages (and disadvantages!) of building and deploying cloud solutions.`
+				var_31 := `Whilst at Streamliners, a major focus of the work has been a move towards a cloud-based microservice based architecture.`
 				_, err = templBuffer.WriteString(var_31)
 				if err != nil {
 					return err
@@ -316,8 +316,17 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_32 := `I've gain a huge respect for the potential for these tools to empower development teams and, quite honestly, its excites me greatly.`
+				var_32 := `I've been really engaged by exploring the benefits and opportunities of serverless solutions for quickly developing really complex software solutions. Leading the design and implementation of these technologies gave me a first hand look at the advantages (and disadvantages!) of building and deploying cloud solutions.`
 				_, err = templBuffer.WriteString(var_32)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString(" ")
+				if err != nil {
+					return err
+				}
+				var_33 := `I've gain a huge respect for the potential for these tools to empower development teams and, quite honestly, its excites me greatly.`
+				_, err = templBuffer.WriteString(var_33)
 				if err != nil {
 					return err
 				}
@@ -326,7 +335,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Focus").Render(templ.WithChildren(ctx, var_29), templBuffer)
+			err = subbox("Focus").Render(templ.WithChildren(ctx, var_30), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -334,22 +343,13 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_33 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_34 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_34 := `Working with the team to improve effectiveness & apply continuous improvement principles`
-				_, err = templBuffer.WriteString(var_34)
-				if err != nil {
-					return err
-				}
-				_, err = templBuffer.WriteString(" ")
-				if err != nil {
-					return err
-				}
-				var_35 := `Building Process Jira Workflows & Dashboards for the Team`
+				var_35 := `Working with the team to improve effectiveness & apply continuous improvement principles`
 				_, err = templBuffer.WriteString(var_35)
 				if err != nil {
 					return err
@@ -358,7 +358,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_36 := `Running Retros`
+				var_36 := `Building Process Jira Workflows & Dashboards for the Team`
 				_, err = templBuffer.WriteString(var_36)
 				if err != nil {
 					return err
@@ -367,7 +367,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_37 := `Working with stakeholders to remove blockers`
+				var_37 := `Running Retros`
 				_, err = templBuffer.WriteString(var_37)
 				if err != nil {
 					return err
@@ -376,8 +376,17 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_38 := `Proposing and developing solutions for several company platforms`
+				var_38 := `Working with stakeholders to remove blockers`
 				_, err = templBuffer.WriteString(var_38)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString(" ")
+				if err != nil {
+					return err
+				}
+				var_39 := `Proposing and developing solutions for several company platforms`
+				_, err = templBuffer.WriteString(var_39)
 				if err != nil {
 					return err
 				}
@@ -386,7 +395,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Scrum Master").Render(templ.WithChildren(ctx, var_33), templBuffer)
+			err = subbox("Scrum Master").Render(templ.WithChildren(ctx, var_34), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -395,24 +404,24 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Streamliners", "pro").Render(templ.WithChildren(ctx, var_24), templBuffer)
+		err = box("Streamliners", "pro", false).Render(templ.WithChildren(ctx, var_25), templBuffer)
 		if err != nil {
 			return err
 		}
-		var_39 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		var_40 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 			templBuffer, templIsBuffer := w.(*bytes.Buffer)
 			if !templIsBuffer {
 				templBuffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templBuffer)
 			}
-			var_40 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_41 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_41 := `eStar is one of Australasia’s leading e-commerce SaaS platforms creating high-end bespoke e-commerce websites for large international companies.`
-				_, err = templBuffer.WriteString(var_41)
+				var_42 := `eStar is one of Australasia’s leading e-commerce SaaS platforms creating high-end bespoke e-commerce websites for large international companies.`
+				_, err = templBuffer.WriteString(var_42)
 				if err != nil {
 					return err
 				}
@@ -421,7 +430,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Background").Render(templ.WithChildren(ctx, var_40), templBuffer)
+			err = subbox("Background").Render(templ.WithChildren(ctx, var_41), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -429,14 +438,14 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_42 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_43 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				var_43 := `IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms`
-				_, err = templBuffer.WriteString(var_43)
+				var_44 := `IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms`
+				_, err = templBuffer.WriteString(var_44)
 				if err != nil {
 					return err
 				}
@@ -445,7 +454,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_42), templBuffer)
+			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_43), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -453,16 +462,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_44 := `While at eStar built various system components and learnt various technologies.`
-			_, err = templBuffer.WriteString(var_44)
-			if err != nil {
-				return err
-			}
-			_, err = templBuffer.WriteString(" ")
-			if err != nil {
-				return err
-			}
-			var_45 := `Development spanned the entire stack, front-end web development for client websites as well as the iSAMS administration portal.`
+			var_45 := `While at eStar built various system components and learnt various technologies.`
 			_, err = templBuffer.WriteString(var_45)
 			if err != nil {
 				return err
@@ -471,7 +471,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_46 := `Role`
+			var_46 := `Development spanned the entire stack, front-end web development for client websites as well as the iSAMS administration portal.`
 			_, err = templBuffer.WriteString(var_46)
 			if err != nil {
 				return err
@@ -480,7 +480,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_47 := `IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms`
+			var_47 := `Role`
 			_, err = templBuffer.WriteString(var_47)
 			if err != nil {
 				return err
@@ -489,7 +489,7 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_48 := `While at eStar built various system components and learnt various technologies.`
+			var_48 := `IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms`
 			_, err = templBuffer.WriteString(var_48)
 			if err != nil {
 				return err
@@ -498,7 +498,16 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_49 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			var_49 := `While at eStar built various system components and learnt various technologies.`
+			_, err = templBuffer.WriteString(var_49)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString(" ")
+			if err != nil {
+				return err
+			}
+			var_50 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 				templBuffer, templIsBuffer := w.(*bytes.Buffer)
 				if !templIsBuffer {
 					templBuffer = templ.GetBuffer()
@@ -508,16 +517,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_50 := `Development spanned the entire stack, front-end web development for client websites as well as the federated muli-client iSAMS administration portal.`
-				_, err = templBuffer.WriteString(var_50)
-				if err != nil {
-					return err
-				}
-				_, err = templBuffer.WriteString(" ")
-				if err != nil {
-					return err
-				}
-				var_51 := `I had a number of opportunities at eStar, giving me a wide range of development experience across a number of teams:`
+				var_51 := `Development spanned the entire stack, front-end web development for client websites as well as the federated muli-client iSAMS administration portal.`
 				_, err = templBuffer.WriteString(var_51)
 				if err != nil {
 					return err
@@ -526,7 +526,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_52 := `David Jones Project Team`
+				var_52 := `I had a number of opportunities at eStar, giving me a wide range of development experience across a number of teams:`
 				_, err = templBuffer.WriteString(var_52)
 				if err != nil {
 					return err
@@ -535,7 +535,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_53 := `Working with large multinational clients`
+				var_53 := `David Jones Project Team`
 				_, err = templBuffer.WriteString(var_53)
 				if err != nil {
 					return err
@@ -544,7 +544,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_54 := `Meeting complex stakeholder goals`
+				var_54 := `Working with large multinational clients`
 				_, err = templBuffer.WriteString(var_54)
 				if err != nil {
 					return err
@@ -553,7 +553,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_55 := `Developing and optimising for an application operating at a very large scale (~2.5 M Visits/mth)`
+				var_55 := `Meeting complex stakeholder goals`
 				_, err = templBuffer.WriteString(var_55)
 				if err != nil {
 					return err
@@ -562,7 +562,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_56 := `Air New Zealand`
+				var_56 := `Developing and optimising for an application operating at a very large scale (~2.5 M Visits/mth)`
 				_, err = templBuffer.WriteString(var_56)
 				if err != nil {
 					return err
@@ -571,7 +571,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_57 := `Leading meetings with clienta`
+				var_57 := `Air New Zealand`
 				_, err = templBuffer.WriteString(var_57)
 				if err != nil {
 					return err
@@ -580,7 +580,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_58 := `Design, developed, and supported a highly custom multi-tenancy external supplier product management system requiring wide-scale refactoring of a large existing e-commerce solution`
+				var_58 := `Leading meetings with clienta`
 				_, err = templBuffer.WriteString(var_58)
 				if err != nil {
 					return err
@@ -589,7 +589,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_59 := `On Call Support (24/7)`
+				var_59 := `Design, developed, and supported a highly custom multi-tenancy external supplier product management system requiring wide-scale refactoring of a large existing e-commerce solution`
 				_, err = templBuffer.WriteString(var_59)
 				if err != nil {
 					return err
@@ -598,7 +598,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_60 := `Triage client on-call requests`
+				var_60 := `On Call Support (24/7)`
 				_, err = templBuffer.WriteString(var_60)
 				if err != nil {
 					return err
@@ -607,7 +607,7 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_61 := `Addressing and escalate as required`
+				var_61 := `Triage client on-call requests`
 				_, err = templBuffer.WriteString(var_61)
 				if err != nil {
 					return err
@@ -616,8 +616,17 @@ func about(yearSince string) templ.Component {
 				if err != nil {
 					return err
 				}
-				var_62 := `Managing the response and writing root cause incident reports`
+				var_62 := `Addressing and escalate as required`
 				_, err = templBuffer.WriteString(var_62)
+				if err != nil {
+					return err
+				}
+				_, err = templBuffer.WriteString(" ")
+				if err != nil {
+					return err
+				}
+				var_63 := `Managing the response and writing root cause incident reports`
+				_, err = templBuffer.WriteString(var_63)
 				if err != nil {
 					return err
 				}
@@ -630,7 +639,7 @@ func about(yearSince string) templ.Component {
 				}
 				return err
 			})
-			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_49), templBuffer)
+			err = subbox("Tech Used").Render(templ.WithChildren(ctx, var_50), templBuffer)
 			if err != nil {
 				return err
 			}
@@ -639,11 +648,11 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("eStar", "pro").Render(templ.WithChildren(ctx, var_39), templBuffer)
+		err = box("eStar", "pro", false).Render(templ.WithChildren(ctx, var_40), templBuffer)
 		if err != nil {
 			return err
 		}
-		var_63 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		var_64 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 			templBuffer, templIsBuffer := w.(*bytes.Buffer)
 			if !templIsBuffer {
 				templBuffer = templ.GetBuffer()
@@ -653,8 +662,8 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_64 := `I love building and flying First-Person-View (FPV) Quadcopters.`
-			_, err = templBuffer.WriteString(var_64)
+			var_65 := `I love building and flying First-Person-View (FPV) Quadcopters.`
+			_, err = templBuffer.WriteString(var_65)
 			if err != nil {
 				return err
 			}
@@ -662,8 +671,8 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_65 := `(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)`
-			_, err = templBuffer.WriteString(var_65)
+			var_66 := `(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)`
+			_, err = templBuffer.WriteString(var_66)
 			if err != nil {
 				return err
 			}
@@ -671,8 +680,8 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_66 := `Watch out for YouTube compression here!`
-			_, err = templBuffer.WriteString(var_66)
+			var_67 := `Watch out for YouTube compression here!`
+			_, err = templBuffer.WriteString(var_67)
 			if err != nil {
 				return err
 			}
@@ -680,8 +689,8 @@ func about(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			var_67 := `something more scenic....`
-			_, err = templBuffer.WriteString(var_67)
+			var_68 := `something more scenic....`
+			_, err = templBuffer.WriteString(var_68)
 			if err != nil {
 				return err
 			}
@@ -694,12 +703,11 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Flying Drones FPV", "fpv").Render(templ.WithChildren(ctx, var_63), templBuffer)
+		err = box("Flying Drones FPV", "fpv", false).Render(templ.WithChildren(ctx, var_64), templBuffer)
 		if err != nil {
 			return err
 		}
-		var_68 := `/* `
-		_, err = templBuffer.WriteString(var_68)
+		_, err = templBuffer.WriteString("<div display=\"none\">")
 		if err != nil {
 			return err
 		}
@@ -727,7 +735,7 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("RC Model Airplanes", "fixed-fpv").Render(templ.WithChildren(ctx, var_69), templBuffer)
+		err = box("RC Model Airplanes", "fixed-fpv", true).Render(templ.WithChildren(ctx, var_69), templBuffer)
 		if err != nil {
 			return err
 		}
@@ -755,12 +763,11 @@ func about(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = box("Smart home/Homelab", "home-lab").Render(templ.WithChildren(ctx, var_71), templBuffer)
+		err = box("Smart home/Homelab", "home-lab", true).Render(templ.WithChildren(ctx, var_71), templBuffer)
 		if err != nil {
 			return err
 		}
-		var_73 := `*/`
-		_, err = templBuffer.WriteString(var_73)
+		_, err = templBuffer.WriteString("</div>")
 		if err != nil {
 			return err
 		}

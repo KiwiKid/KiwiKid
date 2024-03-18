@@ -273,7 +273,7 @@ func nzcovidmap() templ.Component {
 			}
 			return err
 		})
-		err = box("NZCovidMap", "nzcovidmap").Render(templ.WithChildren(ctx, var_2), templBuffer)
+		err = box("NZCovidMap", "nzcovidmap", false).Render(templ.WithChildren(ctx, var_2), templBuffer)
 		if err != nil {
 			return err
 		}

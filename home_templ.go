@@ -34,7 +34,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<div class=\"h-screen flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800\">")
+		_, err = templBuffer.WriteString("<div class=\"h-screen flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800 p-2\">")
 		if err != nil {
 			return err
 		}

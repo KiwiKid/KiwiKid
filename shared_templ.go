@@ -9,7 +9,7 @@ import "context"
 import "io"
 import "bytes"
 
-func box(title string, divId string) templ.Component {
+func box(title string, divId string, smaller bool) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 		templBuffer, templIsBuffer := w.(*bytes.Buffer)
 		if !templIsBuffer {
@@ -22,7 +22,22 @@ func box(title string, divId string) templ.Component {
 			var_1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<div class=\"mx-auto sm:w-4/5 max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen mt-10\"><div id=\"")
+		_, err = templBuffer.WriteString("<div")
+		if err != nil {
+			return err
+		}
+		if smaller {
+			_, err = templBuffer.WriteString(" class=\"mx-auto sm:w-4/5 max-w-7xl px-4 sm:px-6 lg:px-8 mt-10\"")
+			if err != nil {
+				return err
+			}
+		} else {
+			_, err = templBuffer.WriteString(" class=\"mx-auto sm:w-4/5 max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen mt-10\"")
+			if err != nil {
+				return err
+			}
+		}
+		_, err = templBuffer.WriteString("><div id=\"")
 		if err != nil {
 			return err
 		}

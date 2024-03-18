@@ -1,7 +1,7 @@
 package main 
 
 templ about(yearSince string) {
-	@box("Me", "intro") {
+	@box("Me", "intro", false) {
 		<div class="w-full text-center py-2">
 			<p class="italic text-gray-600">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p>
 		</div>
@@ -14,7 +14,7 @@ templ about(yearSince string) {
 			<a class="underline text-2xl hover:text-blue-500 font-semibold" href="mailto:ghcumming01@gmail.com">Get in touch</a>
 		</div>
 	}
-	@box("Tech", "tech") {
+	@box("Tech", "tech", false) {
 		<div class="border border-black p-4">
 			<div class="grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4">
 				<div class="">
@@ -37,10 +37,11 @@ templ about(yearSince string) {
 			</div>
 		</div>
 	}
-	@box("Luxury Escapes", "lux") {
-		Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top 
+	@box("Luxury Escapes", "lux", true) {
+		Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top travel providers.
+		[WIP - adding details here]
 	}
-	@box("Streamliners", "pro") {
+	@box("Streamliners", "pro", false) {
 		@subbox("Background") {
 			Streamliners manages several company platforms, including the largest, Healthpathways, which comprises of a responsive websites, publishing platform, and a shared administration and feedback system serving 30 million patients.
 		}
@@ -60,7 +61,7 @@ templ about(yearSince string) {
 			Proposing and developing solutions for several company platforms
 		}
 	}
-	@box("eStar", "pro") {
+	@box("eStar", "pro", false) {
 		@subbox("Background") {
 			eStar is one of Australasia’s leading e-commerce SaaS platforms creating high-end bespoke e-commerce websites for large international companies.
 		}
@@ -90,7 +91,7 @@ templ about(yearSince string) {
 			</div>
 		}
 	}
-	@box("Flying Drones FPV", "fpv") {
+	@box("Flying Drones FPV", "fpv", false) {
 		<div class="text-center font-medium text-gray-800">I love building and flying First-Person-View (FPV) Quadcopters.</div>
 		<div class="text-center font-medium text-gray-800">(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)</div>
 		<img src="./img/atopthehill.webp"/>
@@ -119,14 +120,15 @@ templ about(yearSince string) {
 				</div>
 			</div>
 		</div>
-	}/* 
-	@box("RC Model Airplanes", "fixed-fpv") {
+	}
+	<div display="none">  
+	@box("RC Model Airplanes", "fixed-fpv", true) {
 		<div>
 			[INSERT FIXED WING WORDS + PICS]
 		</div>
 	}
-	@box("Smart home/Homelab", "home-lab") {
+	@box("Smart home/Homelab", "home-lab", true) {
 		<div>[TODO]</div>
-	}*/
+	}</div>
 }
 

@@ -73,7 +73,7 @@ func chchWaterReporter() templ.Component {
 			}
 			return err
 		})
-		err = box("Christchurch Water Reporter", "chchwaterreporter").Render(templ.WithChildren(ctx, var_2), templBuffer)
+		err = box("Christchurch Water Reporter", "chchwaterreporter", false).Render(templ.WithChildren(ctx, var_2), templBuffer)
 		if err != nil {
 			return err
 		}
