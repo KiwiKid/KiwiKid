@@ -19,7 +19,7 @@ templ subbox(title string) {
 }
 
 templ link(title string, href string) {
-	<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100" href={ templ.SafeURL(href) }>
+	<a class="flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100 p-10" href={ templ.SafeURL(href) }>
 		<span class="text-xl underline">{ title }{ children... }</span>
 	</a>
 }
