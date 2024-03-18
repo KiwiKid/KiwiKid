@@ -112,7 +112,7 @@ func link(title string, href string) templ.Component {
 			var_5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, err = templBuffer.WriteString("<a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100\" href=\"")
+		_, err = templBuffer.WriteString("<a class=\"flex justify-center items-center border border-gray-300 h-20 rounded-md hover:bg-gray-100 p-10\" href=\"")
 		if err != nil {
 			return err
 		}

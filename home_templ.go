@@ -47,7 +47,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var var_3 string = "{ a software developer, football player, hobby fpv drone pilot } "
+		var var_3 string = "{ a software developer, football player, homelab enthusiast, hobby fpv drone pilot } "
 		_, err = templBuffer.WriteString(templ.EscapeString(var_3))
 		if err != nil {
 			return err
@@ -56,17 +56,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var var_4 string = "{ based in Christchurch, New Zealand } "
+		var var_4 string = "{ based in Christchurch, New Zealand "
 		_, err = templBuffer.WriteString(templ.EscapeString(var_4))
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("</div><div class=\"text-gray-700 text-lg mt-2\">")
-		if err != nil {
-			return err
-		}
-		var_5 := `Open to new software development opportunities...`
-		_, err = templBuffer.WriteString(var_5)
 		if err != nil {
 			return err
 		}
@@ -74,8 +65,40 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_6 := `Only considering fully/mostly remote roles.`
+		var_5 := `[`
+		_, err = templBuffer.WriteString(var_5)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("<nz-time></nz-time>")
+		if err != nil {
+			return err
+		}
+		var_6 := `] `
 		_, err = templBuffer.WriteString(var_6)
+		if err != nil {
+			return err
+		}
+		var var_7 string = " } "
+		_, err = templBuffer.WriteString(templ.EscapeString(var_7))
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString("</div><div class=\"text-gray-700 text-lg mt-2\">")
+		if err != nil {
+			return err
+		}
+		var_8 := `Open to new software development opportunities...`
+		_, err = templBuffer.WriteString(var_8)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" ")
+		if err != nil {
+			return err
+		}
+		var_9 := `Only considering fully/mostly remote roles.`
+		_, err = templBuffer.WriteString(var_9)
 		if err != nil {
 			return err
 		}
@@ -83,7 +106,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_7 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		var_10 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
 			templBuffer, templIsBuffer := w.(*bytes.Buffer)
 			if !templIsBuffer {
 				templBuffer = templ.GetBuffer()
@@ -98,7 +121,7 @@ func home(yearSince string) templ.Component {
 			}
 			return err
 		})
-		err = link("NZCovidMap", "#nzcovidmap").Render(templ.WithChildren(ctx, var_7), templBuffer)
+		err = link("NZCovidMap", "#nzcovidmap").Render(templ.WithChildren(ctx, var_10), templBuffer)
 		if err != nil {
 			return err
 		}
@@ -110,8 +133,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_8 := `ChCh Water Reporter`
-		_, err = templBuffer.WriteString(var_8)
+		var_11 := `ChCh Water Reporter`
+		_, err = templBuffer.WriteString(var_11)
 		if err != nil {
 			return err
 		}
@@ -119,8 +142,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_9 := `chch-water-reporter.vercel.app`
-		_, err = templBuffer.WriteString(var_9)
+		var_12 := `chch-water-reporter.vercel.app`
+		_, err = templBuffer.WriteString(var_12)
 		if err != nil {
 			return err
 		}
@@ -132,15 +155,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("</div></div></div>")
-		if err != nil {
-			return err
-		}
-		err = nzcovidmap().Render(ctx, templBuffer)
-		if err != nil {
-			return err
-		}
-		_, err = templBuffer.WriteString("<div id=\"about\" class=\"min-h-screen\">")
+		_, err = templBuffer.WriteString("</div></div></div><div id=\"about\" class=\"min-h-screen\">")
 		if err != nil {
 			return err
 		}
@@ -152,6 +167,10 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
+		err = nzcovidmap().Render(ctx, templBuffer)
+		if err != nil {
+			return err
+		}
 		err = chchWaterReporter().Render(ctx, templBuffer)
 		if err != nil {
 			return err
@@ -160,8 +179,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_10 := `&#x2191;`
-		_, err = templBuffer.WriteString(var_10)
+		var_13 := `&#x2191;`
+		_, err = templBuffer.WriteString(var_13)
 		if err != nil {
 			return err
 		}
@@ -169,8 +188,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_11 := `If you made it this far, you must be keen.`
-		_, err = templBuffer.WriteString(var_11)
+		var_14 := `If you made it this far, you must be keen.`
+		_, err = templBuffer.WriteString(var_14)
 		if err != nil {
 			return err
 		}
@@ -178,8 +197,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_12 := `Get in touch`
-		_, err = templBuffer.WriteString(var_12)
+		var_15 := `Get in touch`
+		_, err = templBuffer.WriteString(var_15)
 		if err != nil {
 			return err
 		}
@@ -187,7 +206,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_13 := `
+		var_16 := `
 					const backToTopButton = document.getElementById('backToTop');
 
 						window.addEventListener('scroll', () => {
@@ -197,8 +216,34 @@ func home(yearSince string) templ.Component {
 								backToTopButton.classList.add('hidden');
 							}
 						});
+
+					class NzTime extends HTMLElement {
+						constructor() {
+						super();
+						this.innerHTML = "Loading time...";
+						}
+
+						connectedCallback() {
+						this.updateTimeAndEmoji();
+						// Update every minute
+						this.intervalId = setInterval(() => this.updateTimeAndEmoji(), 60000);
+						}
+
+						disconnectedCallback() {
+						clearInterval(this.intervalId);
+						}
+
+						updateTimeAndEmoji() {
+						const nzTime = new Date().toLocaleTimeString('en-NZ', { timeZone: 'Pacific/Auckland' });
+						const hour = new Date().toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland', hour: '2-digit', hour12: false });
+						const emoji = hour >= 6 && hour < 18 ? '☀️' : '🌙'; // Sun from 6am to 6pm, otherwise Moon
+						this.innerHTML = ` + "`" + `${nzTime} ${emoji}` + "`" + `;
+						}
+					}
+
+					customElements.define('nz-time', NzTime);
 			`
-		_, err = templBuffer.WriteString(var_13)
+		_, err = templBuffer.WriteString(var_16)
 		if err != nil {
 			return err
 		}
