@@ -70,12 +70,16 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		_, err = templBuffer.WriteString("<nz-time></nz-time>")
+		_, err = templBuffer.WriteString(" <nz-time></nz-time> ")
 		if err != nil {
 			return err
 		}
 		var_6 := `] `
 		_, err = templBuffer.WriteString(var_6)
+		if err != nil {
+			return err
+		}
+		_, err = templBuffer.WriteString(" ")
 		if err != nil {
 			return err
 		}
@@ -175,12 +179,77 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
+		var_13 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			templBuffer, templIsBuffer := w.(*bytes.Buffer)
+			if !templIsBuffer {
+				templBuffer = templ.GetBuffer()
+				defer templ.ReleaseBuffer(templBuffer)
+			}
+			_, err = templBuffer.WriteString("<div><p>")
+			if err != nil {
+				return err
+			}
+			var_14 := `this page would be incomplete without a shot of my incredible cat Hopscotch. `
+			_, err = templBuffer.WriteString(var_14)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString("</p></div> <div class=\"flex justify-center\"><img src=\"./img/hoppy.webp\" class=\"rounded-lg shadow-lg\" height=\"800px\"></div>")
+			if err != nil {
+				return err
+			}
+			if !templIsBuffer {
+				_, err = io.Copy(w, templBuffer)
+			}
+			return err
+		})
+		err = box("Cat Tax", "hopscotch", false).Render(templ.WithChildren(ctx, var_13), templBuffer)
+		if err != nil {
+			return err
+		}
+		var_15 := templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+			templBuffer, templIsBuffer := w.(*bytes.Buffer)
+			if !templIsBuffer {
+				templBuffer = templ.GetBuffer()
+				defer templ.ReleaseBuffer(templBuffer)
+			}
+			_, err = templBuffer.WriteString("<div><p>")
+			if err != nil {
+				return err
+			}
+			var_16 := `I caption a Sunday league team recently promoted to the top division and the Wednesday indoor football team i started recently when 23 games unbeaten (as at 26/9/21) in their third season in the competition. `
+			_, err = templBuffer.WriteString(var_16)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString("</p><p>")
+			if err != nil {
+				return err
+			}
+			var_17 := `I play as much as injuries allow 🤕`
+			_, err = templBuffer.WriteString(var_17)
+			if err != nil {
+				return err
+			}
+			_, err = templBuffer.WriteString("</p></div> <div class=\"flex justify-center\"><img src=\"./img/hoppy.webp\" class=\"rounded-lg shadow-lg\" height=\"800px\"></div>")
+			if err != nil {
+				return err
+			}
+			if !templIsBuffer {
+				_, err = io.Copy(w, templBuffer)
+			}
+			return err
+		})
+		err = box("Passionate football player", "hopscotch", false).Render(templ.WithChildren(ctx, var_15), templBuffer)
+		if err != nil {
+			return err
+		}
 		_, err = templBuffer.WriteString("<button id=\"backToTop\" class=\"hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer\" onclick=\"window.scrollTo({top: 0, behavior: &#39;smooth&#39;});\">")
 		if err != nil {
 			return err
 		}
-		var_13 := `&#x2191;`
-		_, err = templBuffer.WriteString(var_13)
+		var_18 := `&#x2191;`
+		_, err = templBuffer.WriteString(var_18)
 		if err != nil {
 			return err
 		}
@@ -188,8 +257,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_14 := `If you made it this far, you must be keen.`
-		_, err = templBuffer.WriteString(var_14)
+		var_19 := `If you made it this far, you must be keen.`
+		_, err = templBuffer.WriteString(var_19)
 		if err != nil {
 			return err
 		}
@@ -197,8 +266,8 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_15 := `Get in touch`
-		_, err = templBuffer.WriteString(var_15)
+		var_20 := `Get in touch`
+		_, err = templBuffer.WriteString(var_20)
 		if err != nil {
 			return err
 		}
@@ -206,7 +275,7 @@ func home(yearSince string) templ.Component {
 		if err != nil {
 			return err
 		}
-		var_16 := `
+		var_21 := `
 					const backToTopButton = document.getElementById('backToTop');
 
 						window.addEventListener('scroll', () => {
@@ -243,7 +312,7 @@ func home(yearSince string) templ.Component {
 
 					customElements.define('nz-time', NzTime);
 			`
-		_, err = templBuffer.WriteString(var_16)
+		_, err = templBuffer.WriteString(var_21)
 		if err != nil {
 			return err
 		}

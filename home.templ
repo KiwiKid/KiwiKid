@@ -12,7 +12,11 @@ templ home(yearSince string) {
 						{ "{ a software developer, football player, homelab enthusiast, hobby fpv drone pilot } " }
 					</div>
 					<div class="text-gray-600">
-						{ "{ based in Christchurch, New Zealand " } [<nz-time></nz-time>] { " } "}
+						{ "{ based in Christchurch, New Zealand " }
+						[
+						<nz-time></nz-time>
+						] 
+						{ " } " }
 					</div>
 					<div class="text-gray-700 text-lg mt-2">
 						Open to new software development opportunities...
@@ -40,6 +44,27 @@ templ home(yearSince string) {
 			</div>
 			@nzcovidmap()
 			@chchWaterReporter()
+			@box("Cat Tax", "hopscotch", false) {
+				<div>
+				<p>this page would be incomplete without a shot of my incredible cat Hopscotch. </p>
+			</div>
+				<div class="flex justify-center">
+					<img src="./img/hoppy.webp" class="rounded-lg shadow-lg" height="800px"/>
+				</div>
+			}
+			@box("Passionate football player", "hopscotch", false) {
+				<div>
+					<p>I caption a Sunday league team recently promoted to the top division and the Wednesday indoor football team i started recently when 23 games unbeaten (as at 26/9/21) in their third season in the competition. </p>
+					<p>I play as much as injuries allow 🤕</p>
+				</div>
+				<div class="flex justify-center">
+					<img src="./img/hoppy.webp" class="rounded-lg shadow-lg" height="800px"/>
+				</div>
+			}
+			
+
+
+
 			<button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;});">
 				&#x2191;
 			</button>
