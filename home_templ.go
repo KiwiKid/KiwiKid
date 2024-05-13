@@ -231,7 +231,7 @@ func home(yearSince string) templ.Component {
 			if err != nil {
 				return err
 			}
-			_, err = templBuffer.WriteString("</p></div> <div class=\"flex justify-center\"><img src=\"./img/hoppy.webp\" class=\"rounded-lg shadow-lg\" height=\"800px\"></div>")
+			_, err = templBuffer.WriteString("</p></div>")
 			if err != nil {
 				return err
 			}

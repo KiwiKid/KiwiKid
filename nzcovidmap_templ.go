@@ -124,7 +124,7 @@ func nzcovidmap() templ.Component {
 					templBuffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templBuffer)
 				}
-				_, err = templBuffer.WriteString("<div class=\"flex\"><div><ul class=\"list-inside list-disc\"><li>")
+				_, err = templBuffer.WriteString("<div class=\"flex flex-col md:flex-row\"><div class=\"flex-1 p-4\"><ul class=\"list-inside list-disc\"><li>")
 				if err != nil {
 					return err
 				}
@@ -151,7 +151,7 @@ func nzcovidmap() templ.Component {
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</li></ul><h1>")
+				_, err = templBuffer.WriteString("</li></ul><h1 class=\"text-2xl font-bold mt-4\">")
 				if err != nil {
 					return err
 				}
@@ -160,7 +160,7 @@ func nzcovidmap() templ.Component {
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc\"><li>")
+				_, err = templBuffer.WriteString("</h1><ul class=\"list-inside list-disc mb-4\"><li>")
 				if err != nil {
 					return err
 				}
@@ -215,7 +215,7 @@ func nzcovidmap() templ.Component {
 					if err != nil {
 						return err
 					}
-					_, err = templBuffer.WriteString("</li></ul> <h1>")
+					_, err = templBuffer.WriteString("</li></ul> <h1 class=\"text-2xl font-bold mt-4\">")
 					if err != nil {
 						return err
 					}
@@ -237,7 +237,7 @@ func nzcovidmap() templ.Component {
 					if err != nil {
 						return err
 					}
-					var_24 := `This allowed the site to be fully independent of my own local infustructure and for its whole lifetime, run entirely for free on Vercel`
+					var_24 := `This allowed the site to be fully independent of my own local infrastructure and for its whole lifetime, run entirely for free on Vercel`
 					_, err = templBuffer.WriteString(var_24)
 					if err != nil {
 						return err
@@ -255,7 +255,7 @@ func nzcovidmap() templ.Component {
 				if err != nil {
 					return err
 				}
-				_, err = templBuffer.WriteString("</div><img src=\"./img/covid19/nzcovid_2.webp\" class=\"rounded-lg shadow-lg\" height=\"800px\"></div>")
+				_, err = templBuffer.WriteString("</div><div class=\"flex-1 p-4\"><img src=\"./img/covid19/nzcovid_2.webp\" class=\"rounded-lg shadow-lg max-w-full h-auto\"></div></div>")
 				if err != nil {
 					return err
 				}
