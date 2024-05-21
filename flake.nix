@@ -23,6 +23,8 @@
           ];
           shellHook = ''
             echo "Building the Go project..."
+            git config user.name $GIT_AUTHOR_USER
+            git config user.email $GIT_AUTHOR_EMAIL
            templ generate && go run *.go
           '';
         };
@@ -34,6 +36,8 @@
             go 
           ];
           shellHook = ''
+            git config user.name $GIT_AUTHOR_USER
+            git config user.email $GIT_AUTHOR_EMAIL
             tmux new-session -d -s ms \; \
               split-window -h \; \
               send-keys -t 0 'templ generate --watch' C-m \; \
