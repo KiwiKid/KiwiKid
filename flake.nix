@@ -17,10 +17,13 @@
     {
       devShells = {
         build = pkgs.mkShell {
-          buildInputs = [ go ];
+          buildInputs = [
+            go
+           templ
+          ];
           shellHook = ''
             echo "Building the Go project..."
-            go build -o ./tmp/main .
+           templ generate && go run *.go
           '';
         };
 
@@ -31,9 +34,14 @@
             go 
           ];
           shellHook = ''
-            echo "firefox /home/greg/mine/KiwiKid/docs/index.html to preview"
-            templ generate --watch
-
+            tmux new-session -d -s ms \; \
+              split-window -h \; \
+              send-keys -t 0 'templ generate --watch' C-m \; \
+              send-keys -t 1 'go run *.go' \; \
+            attach-session -t ms
+          '';
+          shellExit = ''
+            tmux kill-session -t ms
           '';
         };
       };
