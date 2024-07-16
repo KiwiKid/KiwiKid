@@ -4,7 +4,7 @@ templ home(yearSince string) {
 	@header()
 	<body>
 		<main class="flex-col justify-center text-center font-medium font-mono items-center">
-			<div class="h-screen flex justify-center items-center">
+			<div class="flex justify-center items-center">
 				<div class="text-center">
 					<div class="text-2xl text-gray-800 p-2">Hey, I'm Greg</div>
 					<div class="text-gray-600 m-2">
@@ -22,36 +22,69 @@ templ home(yearSince string) {
 						Only considering fully/mostly remote roles.
 					</div>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-						@link("NZCovidMap", "#nzcovidmap") {
-							<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
+						@box("", "link-covid", "smaller"){
+							@link("NZCovidMap", "#nzcovidmap") {
+								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
+								<p class="my-4 text-lg text-gray-500">A mobile friendly view map view of Covid-19 Locations of Interest published by the NZ Govt during the pandemic - visited via over 100,000 Kiwis over the course of the pandemic</p>
+							}
+							@git("https://github.com/KiwiKid/LocationOfInterestExplorer")
 						}
-						@link("Me", "#intro")
-						<div class="flex flex-col justify-center border border-gray-300 rounded-md hover:bg-gray-100">
-							<a class="flex justify-center items-center h-10" href="#chchwaterreporter">
-								<span class="text-xl underline">ChCh Water Reporter</span>
-							</a>
-							<a class="flex justify-center items-center h-10" href="https://chch-water-reporter.vercel.app" target="_">
-								<span class="text-sm underline">chch-water-reporter.vercel.app</span>
-							</a>
-						</div>
-						@link("FPV", "#fpv")
+
+					
+						@box("", "link-me", "smaller") {
+							@link("Me", "#intro")
+						}
+
+
+						@box("", "hx-tom-select", "smaller"){
+							@link("hx-tom-select", "#hx-tom-select") {
+								<p class="my-4 text-lg text-gray-500">HTMX extention that renders TomSelect input boxes via html attribute configuration</p>
+							}
+							@git("https://github.com/KiwiKid/hx-tomselect")
+						}
+
+
+						@box("", "Bailies Hammer", "smaller"){
+							@link("Bailies Hammer", "#link-bailies-hammer") {
+								<p class="my-4 text-lg text-gray-500">a simple mobile-first golang application for tracking games and seasonal fines for a sports team, can be self-hosted via docker</p>
+							}
+							@git("https://github.com/KiwiKid/baileys-hammer")
+						}
+						
+
+
+						@box("", "link-water-reporter", "smaller"){
+							<div class="flex flex-col justify-center border border-gray-300 rounded-md hover:bg-gray-100">
+								<a class="flex justify-center items-center h-10" href="#chchwaterreporter">
+									<span class="text-xl underline">Christchurch Water Reporter</span>
+									<p class="my-4 text-lg text-gray-500">Experiment in mapping water usage across Christchurch, New Zealand</p>
+								</a>
+								<a class="flex justify-center items-center h-10" href="https://chch-water-reporter.vercel.app" target="_">
+									<span class="text-sm underline">chch-water-reporter.vercel.app</span>
+								</a>
+							</div>
+							@git("https://github.com/KiwiKid/chch-water-reporter")
+						}
+						@box("", "link-fpv", "smaller"){
+							@link("FPV", "#fpv")
+						}
 					</div>
 				</div>
 			</div>
-			<div id="about" class="min-h-screen">
+			<div id="about" class="flex-1">
 				@about(yearSince)
 			</div>
 			@nzcovidmap()
 			@chchWaterReporter()
-			@box("Cat Tax", "hopscotch", false) {
+			@box("Cat Tax", "hopscotch", "bigger") {
 				<div>
-				<p>this page would be incomplete without a shot of my incredible cat Hopscotch. </p>
-			</div>
+					<p>this page would be incomplete without a shot of my incredible cat Hopscotch. </p>
+				</div>
 				<div class="flex justify-center">
 					<img src="./img/hoppy.webp" class="rounded-lg shadow-lg" height="800px"/>
 				</div>
 			}
-			@box("Passionate football player", "hopscotch", false) {
+			@box("Passionate football player", "hopscotch", "bigger") {
 				<div>
 					<p>I caption a Sunday league team recently promoted to the top division and the Wednesday indoor football team i started recently when 23 games unbeaten (as at 26/9/21) in their third season in the competition. </p>
 					<p>I play as much as injuries allow 🤕</p>
@@ -65,7 +98,9 @@ templ home(yearSince string) {
 				&#x2191;
 			</button>
 			<div style="height: 1600px"></div>
-			<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center">If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
+			@box("", "link-contact", "smaller"){
+				<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center">If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
+			}
 			<script>
 					const backToTopButton = document.getElementById('backToTop');
 
