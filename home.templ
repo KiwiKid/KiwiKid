@@ -23,7 +23,7 @@ templ home(yearSince string) {
 					</div>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
 						@box("", "link-covid", "smaller"){
-							@link("NZCovidMap", "#nzcovidmap") {
+							@link("NZCovidMap", "#nzcovidmap", "extenal") {
 								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
 								<p class="my-4 text-lg text-gray-500">A mobile friendly view map view of Covid-19 Locations of Interest published by the NZ Govt during the pandemic - visited via over 100,000 Kiwis over the course of the pandemic</p>
 							}
@@ -32,12 +32,12 @@ templ home(yearSince string) {
 
 					
 						@box("", "link-me", "smaller") {
-							@link("Me", "#intro")
+							@link("Me", "#intro", "")
 						}
 
 
 						@box("", "hx-tom-select", "smaller"){
-							@link("hx-tom-select", "#hx-tom-select") {
+							@link("hx-tom-select", "#hx-tom-select", "") {
 								<p class="my-4 text-lg text-gray-500">HTMX extention that renders TomSelect input boxes via html attribute configuration</p>
 							}
 							@git("https://github.com/KiwiKid/hx-tomselect")
@@ -45,28 +45,22 @@ templ home(yearSince string) {
 
 
 						@box("", "Bailies Hammer", "smaller"){
-							@link("Bailies Hammer", "#link-bailies-hammer") {
+							@link("Bailies Hammer", "#link-bailies-hammer", "") {
 								<p class="my-4 text-lg text-gray-500">a simple mobile-first golang application for tracking games and seasonal fines for a sports team, can be self-hosted via docker</p>
 							}
 							@git("https://github.com/KiwiKid/baileys-hammer")
 						}
 						
 
-
-						@box("", "link-water-reporter", "smaller"){
-							<div class="flex flex-col justify-center border border-gray-300 rounded-md hover:bg-gray-100">
-								<a class="flex justify-center items-center h-10" href="#chchwaterreporter">
-									<span class="text-xl underline">Christchurch Water Reporter</span>
-									<p class="my-4 text-lg text-gray-500">Experiment in mapping water usage across Christchurch, New Zealand</p>
-								</a>
-								<a class="flex justify-center items-center h-10" href="https://chch-water-reporter.vercel.app" target="_">
-									<span class="text-sm underline">chch-water-reporter.vercel.app</span>
-								</a>
-							</div>
+						@box("", "Christchurch Water Reporter", "smaller"){
+							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "") {
+								<p class="my-4 text-lg text-gray-500">Experiment in mapping water usage across Christchurch, New Zealand</p>
+							}
 							@git("https://github.com/KiwiKid/chch-water-reporter")
 						}
+
 						@box("", "link-fpv", "smaller"){
-							@link("FPV", "#fpv")
+							@link("FPV", "#fpv", "")
 						}
 					</div>
 				</div>
