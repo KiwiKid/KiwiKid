@@ -27,7 +27,7 @@ func home(yearSince string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body><main class=\"flex-col justify-center text-center font-medium font-mono items-center\"><div class=\"flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800 p-2\">Hey, I'm Greg</div><div class=\"text-gray-600 m-2\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body><main class=\"flex-col justify-center text-center font-medium font-mono items-center mt-6\"><div class=\"flex justify-center items-center\"><div class=\"text-center\"><div class=\"text-2xl text-gray-800 p-2\">Hey, I'm Greg</div><div class=\"text-gray-600 m-2\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
