@@ -315,7 +315,7 @@ func home(yearSince string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button id=\"backToTop\" class=\"hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer\" onclick=\"window.scrollTo({top: 0, behavior: &#39;smooth&#39;});\">&#x2191;</button><div style=\"height: 1600px mb-10\"></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<button id=\"backToTop\" class=\"hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer\" onclick=\"window.scrollTo({top: 0, behavior: &#39;smooth&#39;});\">&#x2191;</button><div style=\"height: 1600px mb-12\"></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
