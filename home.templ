@@ -21,6 +21,7 @@ templ home(yearSince string) {
 						Open to new software development opportunities...
 						Only considering fully/mostly remote roles.
 					</div>
+					<a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
 						@box("", "link-covid", "smaller"){
 							@link("NZCovidMap", "#nzcovidmap", "extenal") {
@@ -37,7 +38,7 @@ templ home(yearSince string) {
 
 
 						@box("", "hx-tom-select", "smaller"){
-							@link("hx-tom-select", "#hx-tom-select", "") {
+							@link("hx-tom-select", "https://github.com/KiwiKid/hx-tomselect", "external") {
 								<p class="my-4 text-lg text-gray-500">HTMX extention that renders TomSelect input boxes via html attribute configuration</p>
 							}
 							@git("https://github.com/KiwiKid/hx-tomselect")
@@ -45,17 +46,19 @@ templ home(yearSince string) {
 
 
 						@box("", "Sports Team Fines", "smaller"){
-							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "") {
+							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external") {
 								<p class="my-4 text-lg text-gray-500">A simple mobile-first golang application for tracking games and seasonal fines for a sports team, can be self-hosted via docker</p>
 							}
+							<a href="https://sports-team-fines.fly.dev" target="_"><img src="./img/fines.png" height="350" class="mt-3" /></a>
 							@git("https://github.com/KiwiKid/baileys-hammer")
 						}
-						
 
 						@box("", "Christchurch Water Reporter", "smaller"){
-							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "") {
+							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external") {
 								<p class="my-4 text-lg text-gray-500">Experiment in mapping water usage across Christchurch, New Zealand</p>
 							}
+							<a href="https://chch-water-reporter.vercel.app" target="_"><img src="./img/chch-reporting.PNG" height="350" class="mt-3" /></a>
+
 							@git("https://github.com/KiwiKid/chch-water-reporter")
 						}
 

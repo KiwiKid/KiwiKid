@@ -66,7 +66,7 @@ func home(yearSince string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"text-gray-700 text-lg mt-2\">Open to new software development opportunities... Only considering fully/mostly remote roles.</div><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div><div class=\"text-gray-700 text-lg mt-2\">Open to new software development opportunities... Only considering fully/mostly remote roles.</div><a class=\"underline text-2xl\" href=\"mailto:ghcumming01@gmail.com\">Get in touch</a><div class=\"grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -152,7 +152,7 @@ func home(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = link("hx-tom-select", "#hx-tom-select", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("hx-tom-select", "https://github.com/KiwiKid/hx-tomselect", "external").Render(templ.WithChildren(ctx, templ_7745c5c3_Var9), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -194,11 +194,11 @@ func home(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external").Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <a href=\"https://sports-team-fines.fly.dev\" target=\"_\"><img src=\"./img/fines.png\" height=\"350\" class=\"mt-3\"></a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -236,11 +236,11 @@ func home(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external").Render(templ.WithChildren(ctx, templ_7745c5c3_Var13), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <a href=\"https://chch-water-reporter.vercel.app\" target=\"_\"><img src=\"./img/chch-reporting.PNG\" height=\"350\" class=\"mt-3\"></a>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
