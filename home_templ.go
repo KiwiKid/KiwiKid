@@ -194,7 +194,7 @@ func home(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = link("Bailies Hammer", "#link-bailies-hammer", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var11), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -211,7 +211,7 @@ func home(yearSince string) templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = box("", "Bailies Hammer", "smaller").Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = box("", "Sports Team Fines", "smaller").Render(templ.WithChildren(ctx, templ_7745c5c3_Var10), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -338,7 +338,7 @@ func home(yearSince string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script>\n\t\t\t\t\tconst backToTopButton = document.getElementById('backToTop');\n\n\t\t\t\t\t\twindow.addEventListener('scroll', () => {\n\t\t\t\t\t\t\tif (window.pageYOffset > 100) {\n\t\t\t\t\t\t\t\tbackToTopButton.classList.remove('hidden');\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\tbackToTopButton.classList.add('hidden');\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t});\n\n\t\t\t\t\tclass NzTime extends HTMLElement {\n\t\t\t\t\t\tconstructor() {\n\t\t\t\t\t\tsuper();\n\t\t\t\t\t\tthis.innerHTML = \"Loading time...\";\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tconnectedCallback() {\n\t\t\t\t\t\tthis.updateTimeAndEmoji();\n\t\t\t\t\t\t// Update every minute\n\t\t\t\t\t\tthis.intervalId = setInterval(() => this.updateTimeAndEmoji(), 60000);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tdisconnectedCallback() {\n\t\t\t\t\t\tclearInterval(this.intervalId);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tupdateTimeAndEmoji() {\n\t\t\t\t\t\tconst nzTime = new Date().toLocaleTimeString('en-NZ', { timeZone: 'Pacific/Auckland' });\n\t\t\t\t\t\tconst hour = new Date().toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland', hour: '2-digit', hour12: false });\n\t\t\t\t\t\tconst emoji = hour >= 6 && hour < 18 ? '☀️' : '🌙'; // Sun from 6am to 6pm, otherwise Moon\n\t\t\t\t\t\tthis.innerHTML = `${nzTime} ${emoji}`;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tcustomElements.define('nz-time', NzTime);\n\t\t\t</script><scroll-tracker></scroll-tracker></main></body>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script>\n\t\t\t\t\tconst backToTopButton = document.getElementById('backToTop');\n\n\t\t\t\t\t\twindow.addEventListener('scroll', () => {\n\t\t\t\t\t\t\tif (window.pageYOffset > 100) {\n\t\t\t\t\t\t\t\tbackToTopButton.classList.remove('hidden');\n\t\t\t\t\t\t\t} else {\n\t\t\t\t\t\t\t\tbackToTopButton.classList.add('hidden');\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t});\n\n\t\t\t\t\tclass NzTime extends HTMLElement {\n\t\t\t\t\t\tconstructor() {\n\t\t\t\t\t\tsuper();\n\t\t\t\t\t\tthis.innerHTML = \"Loading time...\";\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tconnectedCallback() {\n\t\t\t\t\t\tthis.updateTimeAndEmoji();\n\t\t\t\t\t\t// Update every minute\n\t\t\t\t\t\tthis.intervalId = setInterval(() => this.updateTimeAndEmoji(), 60000);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tdisconnectedCallback() {\n\t\t\t\t\t\tclearInterval(this.intervalId);\n\t\t\t\t\t\t}\n\n\t\t\t\t\t\tupdateTimeAndEmoji() {\n\t\t\t\t\t\tconst nzTime = new Date().toLocaleTimeString('en-NZ', { timeZone: 'Pacific/Auckland' });\n\t\t\t\t\t\tconst hour = new Date().toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland', hour: '2-digit', hour12: false });\n\t\t\t\t\t\tconst emoji = hour >= 6 && hour < 18 ? '☀️' : '🌙'\n\t\t\t\t\t\tthis.innerHTML = `${nzTime} ${emoji}`;\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\n\t\t\t\t\tcustomElements.define('nz-time', NzTime);\n\t\t\t</script><scroll-tracker></scroll-tracker></main></body>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

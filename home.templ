@@ -44,8 +44,8 @@ templ home(yearSince string) {
 						}
 
 
-						@box("", "Bailies Hammer", "smaller"){
-							@link("Bailies Hammer", "#link-bailies-hammer", "") {
+						@box("", "Sports Team Fines", "smaller"){
+							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "") {
 								<p class="my-4 text-lg text-gray-500">A simple mobile-first golang application for tracking games and seasonal fines for a sports team, can be self-hosted via docker</p>
 							}
 							@git("https://github.com/KiwiKid/baileys-hammer")
@@ -117,7 +117,7 @@ templ home(yearSince string) {
 						updateTimeAndEmoji() {
 						const nzTime = new Date().toLocaleTimeString('en-NZ', { timeZone: 'Pacific/Auckland' });
 						const hour = new Date().toLocaleString('en-NZ', { timeZone: 'Pacific/Auckland', hour: '2-digit', hour12: false });
-						const emoji = hour >= 6 && hour < 18 ? '☀️' : '🌙'; // Sun from 6am to 6pm, otherwise Moon
+						const emoji = hour >= 6 && hour < 18 ? '☀️' : '🌙'
 						this.innerHTML = `${nzTime} ${emoji}`;
 						}
 					}
