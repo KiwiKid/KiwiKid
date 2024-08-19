@@ -89,12 +89,12 @@ func box(title string, divId string, size string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if size == "bigger" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"border border-black shadow-lg rounded-lg p-4 bg-white\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"border border-black shadow-lg rounded-lg bg-white p-4\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg bg-white p-4\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -176,7 +176,7 @@ func link(title string, href string, linkType string) templ.Component {
 			templ_7745c5c3_Var6 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<a class=\"flex justify-center items-center border border-gray-300 min-h-20 rounded-md hover:bg-gray-100 p-10\" href=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<a class=\" flex justify-center items-center border border-gray-300 min-h-20 rounded-md hover:bg-gray-100 p-10\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

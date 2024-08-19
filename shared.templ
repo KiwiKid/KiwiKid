@@ -16,9 +16,9 @@ templ box(title string, divId string, size string) {
 			<div class="text-3xl text-center font-semibold mb-4">{ title }</div>
 			<div 
 			if size == "bigger" {
-				class="border border-black shadow-lg rounded-lg p-4 bg-white"
+				class="min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white"
 			} else {
-				class="border border-black shadow-lg rounded-lg bg-white p-4"
+				class="min-w-40 border border-black shadow-lg rounded-lg bg-white p-4"
 			}>
 				{ children... }
 			</div>
@@ -34,7 +34,7 @@ templ subbox(title string) {
 
 templ link(title string, href string, linkType string) {
 	
-	<a class="flex justify-center items-center border border-gray-300 min-h-20 rounded-md hover:bg-gray-100 p-10" href={ templ.SafeURL(href) }>
+	<a class=" flex justify-center items-center border border-gray-300 min-h-20 rounded-md hover:bg-gray-100 p-10" href={ templ.SafeURL(href) }>
 		<span class="underline"><span class="text-xl">{ title }</span>{ children... }</span>
 		if linkType == "external" {
 						<svg width="200px" height="200px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
