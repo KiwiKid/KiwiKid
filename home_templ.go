@@ -231,7 +231,7 @@ func home(yearSince string) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"my-4 text-lg text-gray-500\">Experiment in mapping water usage across Christchurch, New Zealand</p>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"my-4 text-lg text-gray-500\">Mapping Community water usage</p><p>A experiment in mapping the average water usage in Christchurch, New Zealand</p>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
