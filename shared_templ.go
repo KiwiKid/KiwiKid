@@ -89,12 +89,12 @@ func box(title string, divId string, size string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if size == "bigger" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white text-left\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 		} else {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg bg-white p-4\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"min-w-40 border border-black shadow-lg rounded-lg bg-white p-4 text-left\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

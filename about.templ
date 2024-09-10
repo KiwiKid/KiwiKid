@@ -38,9 +38,25 @@ templ about(yearSince string) {
 		}
 	}
 	@box("Luxury Escapes", "lux", "smaller") {
-		Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance e-ecommerce platform with startup-like pace of development.
+		Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance, high-scale, global e-ecommerce platform with startup-like pace of new feature development.
 		@subbox("Tech Used") {
-			Nodejs, React, postgres, Pulumi, NewRelic, BigQuery, Redis, Various AWS products
+			NodeJS, React, postgres, Pulumi, AWS, NewRelic, Heroku, BigQuery, Redis, various AWS services, and (after some convincing) a little bit of HTMX
+		}
+		@subbox("Focus") {
+			Working remotely for luxury escapes allowed me to thrive across a number of domains:
+			<ul class="list-inside list-disc">
+			<li>Core Pricing & Promotion Rebuild
+				<ul class="list-inside list-disc"> 
+				
+					<li>Migration of logic from the client to server</li>
+					<li>Braze Customer Segment integration</li>
+					<li>Core pricing logic</li>
+				</ul>
+			</li>
+			<li>Google Hotel Ads integration</li>
+			<li>Expansion of the Contentful integration</li>
+			<li>Working across various product, customer and order feeds/integrations</li>
+			</ul>
 		}
 	}
 	@box("Streamliners", "pro", "bigger") {
@@ -79,17 +95,19 @@ templ about(yearSince string) {
 			<div>
 				Development spanned the entire stack, front-end web development for client websites as well as the federated muli-client iSAMS administration portal.
 				I had a number of opportunities at eStar, giving me a wide range of development experience across a number of teams:
-				David Jones Project Team
-				Working with large multinational clients
-				Meeting complex stakeholder goals
-				Developing and optimising for an application operating at a very large scale (~2.5 M Visits/mth)
-				Air New Zealand
-				Leading meetings with clienta
-				Design, developed, and supported a highly custom multi-tenancy external supplier product management system requiring wide-scale refactoring of a large existing e-commerce solution
-				On Call Support (24/7)
-				Triage client on-call requestsss
-				Addressing and escalate as required
-				Managing the response and writing root cause incident reports
+				<ul class="list-inside list-disc">
+					<li>David Jones Project Team</li>
+					<li>Working with large multinational clients</li>
+					<li>Meeting complex stakeholder goals</li>
+					<li>Developing and optimizing for an application operating at a very large scale (~2.5 M Visits/mth)</li>
+					<li>Air New Zealand</li>
+					<li>Leading meetings with clienta</li>
+					<li>Design, developed, and supported a highly custom multi-tenancy external supplier product management system requiring wide-scale refactoring of a large existing e-commerce solution</li>
+					<li>On Call Support (24/7)</li>
+					<li>Triage client on-call requests</li>
+					<li>Addressing and escalate as required</li>
+					<li>Managing the response and writing root cause incident reports</li>
+				</ul>
 			</div>
 		}
 	}
@@ -134,10 +152,12 @@ templ about(yearSince string) {
 
 		</div>
 	}
-	<div display="none">
+	<div class="hidden">
 		
 		@box("Smart home/Homelab", "home-lab", "smaller") {
-			<div>[TODO]</div>
+			<div>
+				
+			</div>
 		}
 	</div>
 }

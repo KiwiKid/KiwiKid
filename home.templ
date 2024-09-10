@@ -26,7 +26,8 @@ templ home(yearSince string) {
 						@box("", "link-covid", "smaller"){
 							@link("NZCovidMap", "#nzcovidmap", "extenal") {
 								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
-								<p class="my-4 text-lg text-gray-500">A mobile friendly view map view of Covid-19 Locations of Interest published by the NZ Govt during the pandemic - visited via over 100,000 Kiwis over the course of the pandemic</p>
+								<p class="my-4 text-lg text-gray-500">Covid-19 Locations of Interest published by the NZ Govt</p>
+								<p>Used by over 100,000 Kiwis over the course of the pandemic</p>
 							}
 							@git("https://github.com/KiwiKid/LocationOfInterestExplorer")
 						}
@@ -39,7 +40,8 @@ templ home(yearSince string) {
 
 						@box("", "hx-tom-select", "smaller"){
 							@link("hx-tom-select", "https://github.com/KiwiKid/hx-tomselect", "external") {
-								<p class="my-4 text-lg text-gray-500">HTMX extention that renders TomSelect input boxes via html attribute configuration</p>
+								<p class="my-4 text-lg text-gray-500">htmx extension that configures TomSelect Multi-select via simple html elements</p>
+								<p></p>
 							}
 							@git("https://github.com/KiwiKid/hx-tomselect")
 							<img src="./img/hx-tomselect-demo.gif" height="350" class="mt-3" />
@@ -48,7 +50,7 @@ templ home(yearSince string) {
 
 						@box("", "Sports Team Fines", "smaller"){
 							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external") {
-								<p class="my-4 text-lg text-gray-500">A simple mobile-first golang application for tracking games and seasonal fines for a sports team, can be self-hosted via docker</p>
+								<p class="my-4 text-lg text-gray-500">Htmx and golang application for tracking games and seasonal fines for a sports team</p>
 							}
 							<a href="https://sports-team-fines.fly.dev" target="_"><img src="./img/fines.png" height="350" class="mt-3" /></a>
 							@git("https://github.com/KiwiKid/baileys-hammer")
@@ -56,7 +58,8 @@ templ home(yearSince string) {
 
 						@box("", "Christchurch Water Reporter", "smaller"){
 							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external") {
-								<p class="my-4 text-lg text-gray-500">Experiment in mapping water usage across Christchurch, New Zealand</p>
+								<p class="my-4 text-lg text-gray-500">Mapping Community water usage</p>
+								<p>A experiment in mapping the average water usage in Christchurch, New Zealand</p>
 							}
 							<a href="https://chch-water-reporter.vercel.app" target="_"><img src="./img/chch-reporting.PNG" alt="a image of christchurch with circles representing how much water each address uses" height="350" class="mt-3" /></a>
 							<div class="flex">

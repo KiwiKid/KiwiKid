@@ -16,9 +16,9 @@ templ box(title string, divId string, size string) {
 			<div class="text-3xl text-center font-semibold mb-4">{ title }</div>
 			<div 
 			if size == "bigger" {
-				class="min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white"
+				class="min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white text-left"
 			} else {
-				class="min-w-40 border border-black shadow-lg rounded-lg bg-white p-4"
+				class="min-w-40 border border-black shadow-lg rounded-lg bg-white p-4 text-left"
 			}>
 				{ children... }
 			</div>
