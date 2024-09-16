@@ -29,20 +29,20 @@ func about(yearSince string) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"w-full text-center py-2\"><p class=\"italic text-gray-600\">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p></div><p class=\"mb-4 text-gray-700\">Developing in a professional capacity as a full stack developer for over ")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"w-full text-center py-2\"><p class=\"italic text-gray-600\">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p></div><p class=\"mb-4 text-gray-700\">Highly driven full stack software developer working in a professional capacity as a full stack developer for over ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			var templ_7745c5c3_Var3 string
 			templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(yearSince)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `about.templ`, Line: 8, Col: 116}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `about.templ`, Line: 8, Col: 157}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" years.</p><p class=\"mb-4 text-gray-700\">Extensive experience in implementing complex software solutions, based on varying degrees of specification.</p><p class=\"mb-4 text-gray-700\">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p><p class=\"mb-4 text-gray-700\">I am passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p><p class=\"mb-4 text-gray-700\">I am excited about continuing to explore the benefits and opportunities of serverless/cloud solutions (in the right places)</p><div class=\"border border-black p-4\"><div class=\"grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4\"><div class=\"\"><div class=\"text-xl text-center\">Loving</div><div class=\"italic text-sm\">Development</div><div>NixOS, Golang, a-h/templ, htmx, Tailwind, fish, postgres</div></div><div><div class=\"text-xl text-center\">Learning</div><div>NixOS, Go, htmx, fish</div></div><div><div class=\"text-xl text-center\">Up Next</div><div>podman, </div></div></div><div class=\"col-span-full\"><div class=\"text-xl text-center\">Experience In</div><div>C#, postgres, DBT, Pulumi, Next.js + Vercel, SQL, Tailwind, BigQuery, SQL Server, Node.js, New Relic, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Services (S3, Lambda, Fargte), VSCode, Heroku, Entity Framework, C#, .Net Core, DI</div></div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" years.</p><p class=\"mb-4 text-gray-700\">Extensive experience in implementing complex software solutions, based on varying degrees of specification.</p><p class=\"mb-4 text-gray-700\">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p><p class=\"mb-4 text-gray-700\">Passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p><p class=\"mb-4 text-gray-700\">Excited about continuing to explore the benefits and opportunities of serverless/cloud solutions (in the right places)</p><div class=\"border border-black p-4\"><div class=\"grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4\"><div class=\"\"><div class=\"text-xl text-center\">Loving</div><div class=\"italic text-sm\">Development</div><div>NixOS, Golang, a-h/templ, htmx, Tailwind, fish, postgres, React</div></div><div><div class=\"text-xl text-center\">Learning</div><div>NixOS, Go, htmx, fish</div></div><div><div class=\"text-xl text-center\">Up Next</div><div>podman, Traefik, </div></div></div><div class=\"col-span-full\"><div class=\"text-xl text-center\">Experience In</div><div>React, C#, postgres, DBT, Pulumi, Next.js/Vercel, SQL, Tailwind, BigQuery, SQL Server, Node.js, New Relic, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Services (S3, Lambda, Fargte), VSCode, Heroku, Entity Framework, C#, .Net Core, DI</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -80,7 +80,7 @@ func about(yearSince string) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Luxury Escapes is one of the leading travel provider in Australia, serving over 6 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance, high-scale, global e-ecommerce platform with startup-like pace of new feature development.")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Luxury Escapes is one of the leading travel provider in Australia, serving over 86 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance, high-scale, global e-ecommerce platform with startup-like pace of new feature development.")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -113,7 +113,7 @@ func about(yearSince string) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Working remotely for luxury escapes allowed me to thrive across a number of domains:<ul class=\"list-inside list-disc\"><li>Core Pricing & Promotion Rebuild<ul class=\"list-inside list-disc\"><li>Migration of logic from the client to server</li><li>Braze Customer Segment integration</li><li>Core pricing logic</li></ul></li><li>Google Hotel Ads integration</li><li>Expansion of the Contentful integration</li><li>Working across various product, customer and order feeds/integrations</li></ul>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Working remotely for luxury escapes allowed me to thrive across a number of domains:<ul class=\"list-inside list-disc\"><li>Core Pricing & Promotion Rebuild<ul class=\"list-inside list-disc\"><li>Migration of core pricing/promotion logic from the client to server</li><li>Braze Customer Segment integration</li><li>Integration memebership tier promo pricing conditions</li></ul></li><li>Google Hotel Ads integration</li><li>Expansion of the Contentful integration</li><li>GA & GHA (Google Hotel Ads) integrations</li><li>Working across various product, customer and order feeds/integrations</li></ul>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -193,7 +193,7 @@ func about(yearSince string) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Whilst at Streamliners, a major focus of the work has been a move towards a cloud-based microservice based architecture. I've been really engaged by exploring the benefits and opportunities of serverless solutions for quickly developing really complex software solutions. Leading the design and implementation of these technologies gave me a first hand look at the advantages (and disadvantages!) of building and deploying cloud solutions. I've gain a huge respect for the potential for these tools to empower development teams and, quite honestly, its excites me greatly.")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p>Proposing and developing solutions for several company platforms, including the largest, Healthpathways, which comprises a responsive websites, publishing platform, and shared administration and feedback system serving 30 million patients.</p><p>Whilst at Streamliners, a major focus of the work has been a move towards a cloud-based microservice architecture. I've been really engaged by exploring the benefits and opportunities of serverless solutions for quickly developing software solutions.  Leading design and implementation of these technologies gave me a first hand look at the advantages (and disadvantages!) of building and deploying cloud solutions. I've gained a huge respect for the potential for these tools to empower development teams and, quite honestly, it excites me greatly.</p>- Individual and Team based development, API, Solution Design, CI/CD, TeamCity/GitHub Actions<p>Scrum Master<ul><li>- Working with the team to improve effectiveness & apply continuous improvement principles</li><li>- Building Process Jira Workflows & Dashboards, and supporting (valuable) sprint ceremonies.</li></ul></p>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -259,7 +259,7 @@ func about(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = subbox("Background").Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = subbox("Company").Render(templ.WithChildren(ctx, templ_7745c5c3_Var14), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -305,7 +305,7 @@ func about(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = subbox("Tech Used").Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = subbox("Focus").Render(templ.WithChildren(ctx, templ_7745c5c3_Var16), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

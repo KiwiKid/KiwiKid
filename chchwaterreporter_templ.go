@@ -29,7 +29,15 @@ func chchWaterReporter() templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"chchwaterreporter\" class=\"min-h-screen\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-6xl\"><a class=\"underline\" href=\"https://chch-water-reporter.vercel.app/\" target=\"_\">chch-water-reporter (live site)</a>provides a mobile friendly, representation of water usage in christchurch, its goal is to raise awareness for water conservation and the need for more broad understanding of how we consume our natural resources.</div><div class=\"m-auto sm:w-4/5 max-w-6xl\">With over 170,000 addresses on the map, the app required a dyanmic rendering system for higher zoom levels, which allowed for smooth scrolling, without compromissing on the detail display on the map.</div><img src=\"./img/chch-reporting.PNG\" height=\"898\"> [TODO: add more screen shots here]</div></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"chchwaterreporter\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-6xl \"><div class=\"h-6\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = link("chch-water-reporter (live site)", "https://chch-water-reporter.vercel.app/", "external").Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>provides a mobile friendly, representation of water usage in christchurch, its goal was to raise awareness for water conservation and the need for more broad understanding of how we consume our natural resources.</div><div class=\"m-auto sm:w-4/5 max-w-6xl\">With over 170,000 addresses on the map, the app required a dynamic rendering system for higher zoom levels, this enabled smooth scrolling across 170,000 points, without compromising on performance or detail display on the map.</div><img src=\"./img/chch-reporting.PNG\" height=\"898\"></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

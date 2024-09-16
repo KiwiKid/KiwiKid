@@ -48,7 +48,7 @@ func box(title string, divId string, size string) templ.Component {
 			return templ_7745c5c3_Err
 		}
 		if size == "tiny" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"mx-auto w-full sm:w-1/3 max-w-lg px-4\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"w-full sm:w-1/3 max-w-lg px-4\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
