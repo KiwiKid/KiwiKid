@@ -82,7 +82,7 @@ func home(yearSince string) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<img src=\"./img/covid19/icon-512x512.webp\" alt=\"Locations of Interest Explorer Icon\" class=\"h-8 w-8 md:h-12 md:w-12 mx-auto\"><p class=\"my-4 text-lg text-gray-500\">Covid-19 Locations of Interest published by the NZ Govt</p><p>Used by over 100,000 Kiwis over the course of the pandemic</p>")
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p class=\"my-4 text-lg text-gray-500\">Covid-19 Locations of Interest published by the NZ Govt</p><p>Used by over 100,000 Kiwis over the course of the pandemic</p>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -91,7 +91,7 @@ func home(yearSince string) templ.Component {
 				}
 				return templ_7745c5c3_Err
 			})
-			templ_7745c5c3_Err = link("NZCovidMap", "#nzcovidmap", "extenal").Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("NZCovidMap", "#nzcovidmap", "internal").Render(templ.WithChildren(ctx, templ_7745c5c3_Var6), templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -118,7 +118,7 @@ func home(yearSince string) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = link("Me", "#intro", "").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = link("Me", "#intro", "internal").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

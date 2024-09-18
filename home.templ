@@ -24,17 +24,18 @@ templ home(yearSince string) {
 					<a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a>
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
 						@box("", "link-covid", "smaller"){
-							@link("NZCovidMap", "#nzcovidmap", "extenal") {
-								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-8 w-8 md:h-12 md:w-12 mx-auto"/>
+							@link("NZCovidMap", "#nzcovidmap", "internal") {
 								<p class="my-4 text-lg text-gray-500">Covid-19 Locations of Interest published by the NZ Govt</p>
 								<p>Used by over 100,000 Kiwis over the course of the pandemic</p>
+
+								
 							}
 							@git("https://github.com/KiwiKid/LocationOfInterestExplorer")
 						}
 
 					
 						@box("", "link-me", "smaller") {
-							@link("Me", "#intro", "")
+							@link("Me", "#intro", "internal")
 						}
 
 
