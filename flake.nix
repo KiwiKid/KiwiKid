@@ -16,21 +16,8 @@
     in
     {
       devShells = {
-        build = pkgs.mkShell {
+        ${system}.default = pkgs.mkShell {
           buildInputs = [
-            go
-           templ
-          ];
-          shellHook = ''
-            echo "Building the Go project..."
-            git config user.name $GIT_AUTHOR_USER
-            git config user.email $GIT_AUTHOR_EMAIL
-            templ generate && go run *.go
-          '';
-        };
-
-        dev = pkgs.mkShell {
-          buildInputs = [ 
             pkgs.air
             templ
             go 
@@ -51,5 +38,3 @@
       };
     };
 }
-
-
