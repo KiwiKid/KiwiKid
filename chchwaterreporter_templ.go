@@ -29,7 +29,7 @@ func chchWaterReporter() templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"chchwaterreporter\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-6xl \"><div class=\"\">")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -37,7 +37,7 @@ func chchWaterReporter() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>provides a mobile friendly, representation of water usage in christchurch, its goal was to raise awareness for water conservation and the need for more broad understanding of how we consume our natural resources.</div><div class=\"m-auto sm:w-4/5 max-w-6xl\">With over 170,000 addresses on the map, the app required a dynamic rendering system to enabled smooth scrolling across 170,000 points, without compromising on performance or detail display on the map.</div><img src=\"./img/chch-reporting.PNG\" height=\"898\"></div></div>")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -46,7 +46,7 @@ func chchWaterReporter() templ.Component {
 			}
 			return templ_7745c5c3_Err
 		})
-		templ_7745c5c3_Err = box("Christchurch Water Reporter", "chchwaterreporter", "bigger").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = box("Christchurch Water Reporter", "chchwaterreporter", "bigger", "").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

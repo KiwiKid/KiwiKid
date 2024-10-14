@@ -29,20 +29,33 @@ func main() {
 		log.Fatalf("failed to create output file: %v", err)
 	}
 
-	err = home(yearsSinceStarted()).Render(context.Background(), f)
+	err = home(yearsSinceStarted(), false).Render(context.Background(), f)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	} else {
 		log.Printf("created output in %s", outputDir)
 	}
 
-	// cs.html
+	// cv.html
 	cvComp, err := os.Create(outputDir + "/cv.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
 	}
 
 	err = cv().Render(context.Background(), cvComp)
+	if err != nil {
+		log.Fatalf("failed to write output file: %v", err)
+	} else {
+		log.Printf("created output in %s", outputDir)
+	}
+
+	// index.html
+	all, err := os.Create(outputDir + "/all.html")
+	if err != nil {
+		log.Fatalf("failed to create output file: %v", err)
+	}
+
+	err = home(yearsSinceStarted(), true).Render(context.Background(), all)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	} else {

@@ -2,7 +2,7 @@ package main
 
 templ git(link string) {
     <a href={templ.SafeURL(link)} title={link} class="flex items-center min-w-5">
-        @box("", "link-covid-git", "tiny") {
+        @box("", "link-covid-git", "tiny", "") {
         
             <div class="flex items-center justify-center">
             
@@ -20,7 +20,7 @@ templ git(link string) {
 
 templ option(link string, title string) {
     <a href={templ.SafeURL(link)} title={link} class="flex items-center">
-        @box("", "link-covid-git", "tiny") {
+        @box("", "link-covid-git", "tiny", "") {
         
             <div class="flex items-center justify-center">
             

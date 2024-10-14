@@ -1,0 +1,28 @@
+<div
+ class=\"mx-auto sm:w-4/5 max-w-7xl w-full px-4 sm:px-6 lg:px-8 mt-10 pt-10\"
+ else
+ class=\"mx-auto sm:w-4/5 max-w-7xl w-full px-4 sm:px-6 lg:px-8 min-h-screen mt-30 pt-10\"
+ else
+ class=\"w-full sm:w-1/3 max-w-lg px-4 mt-10 pt-10\"
+ class=\"text-red-500 bg-red-500 mt-10 pt-10\"
+><div id=\"
+\"><div class=\"text-3xl text-center font-semibold mb-4\">
+</div>
+<div class=\"text-center font-semibold mb-4\">
+</div>
+<div
+ class=\"min-w-40 border border-black shadow-lg rounded-lg p-4 bg-white text-left\"
+ class=\"min-w-40 border border-black shadow-lg rounded-lg bg-white p-4 text-left\"
+>
+</div></div></div>
+<div class=\"mt-10\"><div class=\"text-3xl text-center font-semibold mb-4\">
+</div>
+</div>
+<a class=\" flex justify-center items-center border border-gray-300 min-h-20 rounded-md hover:bg-gray-100 p-10\" href=\"
+\"><span class=\"underline\"><span class=\"text-xl\">
+</span>
+</span> 
+<script>\n\t\t\tconsole.warn('linkType not supported')\n\t\t\t</script>
+</a>
+<div class=\"flex justify-center items-center w-full h-screen max-h-\"><div style=\"width: 100%; height: 100%;\" class=\"w-full max-w-4xl h-full\"><iframe class=\"w-full h-full\" frameborder=\"0\" allowfullscreen allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" title=\"Arthur&#39;s Pass\" src=\"
+\" id=\"widget4\"></iframe></div></div>
