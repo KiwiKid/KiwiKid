@@ -27,9 +27,11 @@ func main() {
 	f, err := os.Create(outputDir + "/index.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
+	}else{
+		log.Printf("created index.html in %s", outputDir)
 	}
 
-	err = home(yearsSinceStarted(), false).Render(context.Background(), f)
+	err = index(yearsSinceStarted(), false).Render(context.Background(), f)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	} else {
@@ -40,27 +42,45 @@ func main() {
 	cvComp, err := os.Create(outputDir + "/cv.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
+	}else{
+		log.Printf("created cv.html in %s", outputDir)
+
 	}
 
 	err = cv().Render(context.Background(), cvComp)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	} else {
-		log.Printf("created output in %s", outputDir)
+		log.Printf("created cv output in %s", outputDir)
 	}
 
 	// index.html
 	all, err := os.Create(outputDir + "/all.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
+	}else{
+		log.Printf("created all.html in %s", outputDir)
 	}
 
-	err = home(yearsSinceStarted(), true).Render(context.Background(), all)
+	err = index(yearsSinceStarted(), true).Render(context.Background(), all)
 	if err != nil {
 		log.Fatalf("failed to write output file: %v", err)
-	} else {
-		log.Printf("created output in %s", outputDir)
 	}
+
+	homeDir, err := os.Create(outputDir + "/home.html")
+	if err != nil {
+		log.Fatalf("failed to write output file: %v", err)
+	}
+
+	err = home().Render(context.Background(), homeDir)
+	if err != nil {
+		log.Fatalf("failed to create output file: %v", err)
+	}else {
+		log.Printf("created home.html in %s", outputDir)
+	}
+
+
+
 
 	err = filepath.Walk(staticDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {

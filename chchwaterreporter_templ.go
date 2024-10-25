@@ -29,7 +29,7 @@ func chchWaterReporter() templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"chchwaterreporter\"><div class=\"w-full text-lg\"><div class=\"m-auto sm:w-4/5 max-w-6xl \"><div class=\"\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -37,7 +37,7 @@ func chchWaterReporter() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>This is an attempt at representation of water usage in christchurch, its goal was to raise awareness for water conservation and the need for more broad understanding of how we consume our natural resources.</div><div class=\"m-auto sm:w-4/5 max-w-6xl\">With over 170,000 addresses on the map, the app required a dynamic rendering system to enabled smooth scrolling across 170,000 points, without compromising on performance or detail display on the map.</div><video height=\"360\" controls><source src=\"./img/chch-water-reporter.mp4\" type=\"video/mp4\"> Your browser does not support the video tag.</video><img src=\"./img/chch-reporting.PNG\" height=\"898\"></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

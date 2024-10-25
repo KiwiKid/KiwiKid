@@ -29,7 +29,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"w-full text-center py-2\"><p class=\"italic text-gray-600\">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p></div><p class=\"mb-4 text-gray-700\">Highly driven full stack software developer working in a professional capacity as a full stack developer for over ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -42,7 +42,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" years.</p><p class=\"mb-4 text-gray-700\">Extensive experience in implementing complex software solutions, based on varying degrees of specification.</p><p class=\"mb-4 text-gray-700\">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p><p class=\"mb-4 text-gray-700\">Passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p><p class=\"mb-4 text-gray-700\">Excited about continuing to explore the benefits and opportunities of serverless/cloud solutions (in the right places)</p><div class=\"border border-black p-4\"><div class=\"grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4\"><div class=\"\"><div class=\"text-xl text-center\">Loving</div><div class=\"italic text-sm\">Development</div><div>NixOS, Golang, a-h/templ, htmx, Tailwind, fish, postgres, React</div></div><div><div class=\"text-xl text-center\">Learning</div><div>NixOS, Go, htmx, fish</div></div><div><div class=\"text-xl text-center\">Up Next</div><div>podman, Ruby on Rails, LISP, SmallTalk</div></div></div><div class=\"col-span-full\"><div class=\"text-xl text-center\">Experience In</div><div>React, C#, postgres, DBT, Pulumi, Next.js/Vercel, SQL, Tailwind, BigQuery, SQL Server, Node.js, New Relic, T-SQL, ASP.NET MVC, Web APIs, IIS, AWS CDK, RESTful API design, git, CI/CD, AWS Services (S3, Lambda, Fargte), VSCode, Heroku, Entity Framework, C#, .Net Core, DI</div></div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -53,7 +53,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 						templ_7745c5c3_Buffer = templ.GetBuffer()
 						defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 					}
-					templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 3)
+					_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"text-center w-full\"><a class=\"underline text-2xl hover:text-blue-500 font-semibold\" href=\"mailto:ghcumming01@gmail.com\">Get in touch</a></div>")
 					if templ_7745c5c3_Err != nil {
 						return templ_7745c5c3_Err
 					}
@@ -82,7 +82,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 4)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Luxury Escapes is one of the leading travel provider in Australia, serving over 86 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance, high-scale, global e-ecommerce platform with startup-like pace of new feature development.")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -92,7 +92,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 5)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("NodeJS, React, postgres, Pulumi, AWS, NewRelic, Heroku, BigQuery, Redis, various AWS services, and (after some convincing) a little bit of HTMX")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -105,7 +105,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 6)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -115,7 +115,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 7)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Working remotely for luxury escapes allowed me to thrive across a number of domains:<ul class=\"list-inside list-disc\"><li>Core Pricing & Promotion Rebuild<ul class=\"list-inside list-disc\"><li>Migration of core pricing/promotion logic from the client to server</li><li>Braze Customer Segment integration</li><li>Integration memebership tier promo pricing conditions</li></ul></li><li>Google Hotel Ads integration</li><li>Expansion of the Contentful integration</li><li>GA & GHA (Google Hotel Ads) integrations</li><li>Working across various product, customer and order feeds/integrations</li></ul>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -149,7 +149,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 8)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Streamliners manages several company platforms, including the largest, Healthpathways, which comprises of a responsive websites, publishing platform, and a shared administration and feedback system serving 30 million patients.")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -162,7 +162,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 9)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -172,7 +172,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 10)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("React, C#, .Net Core, ASP.NET Core Web APIs, Entity Framework, TeamCity, GitHub Actions, SQL, Unit Testing, Dependency Injection, ELK, ASP.NET Web Forms, AWS CDK + Range of AWS services including DynamoDB, Lambda, S3 etc")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -185,7 +185,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 11)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -195,7 +195,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 12)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<p>Proposing and developing solutions for several company platforms, including the largest, Healthpathways, which comprises a responsive websites, publishing platform, and shared administration and feedback system serving 30 million patients.</p><p>Whilst at Streamliners, a major focus of the work has been a move towards a cloud-based microservice architecture. I've been really engaged by exploring the benefits and opportunities of serverless solutions for quickly developing software solutions.  Leading design and implementation of these technologies gave me a first hand look at the advantages (and disadvantages!) of building and deploying cloud solutions. I've gained a huge respect for the potential for these tools to empower development teams and, quite honestly, it excites me greatly.</p>- Individual and Team based development, API, Solution Design, CI/CD, TeamCity/GitHub Actions<p>Scrum Master<ul><li>- Working with the team to improve effectiveness & apply continuous improvement principles</li><li>- Building Process Jira Workflows & Dashboards, and supporting (valuable) sprint ceremonies.</li></ul></p>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -208,7 +208,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 13)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -218,7 +218,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 14)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Working with the team to improve effectiveness & apply continuous improvement principles Building Process Jira Workflows & Dashboards for the Team Running Retros Working with stakeholders to remove blockers Proposing and developing solutions for several company platforms")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -252,7 +252,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 15)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("eStar is one of Australasia’s leading e-commerce SaaS platforms creating high-end bespoke e-commerce websites for large international companies.")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -265,7 +265,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 16)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" ")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -275,7 +275,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 17)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -288,7 +288,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 18)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" While at eStar built various system components and learnt various technologies. Development spanned the entire stack, front-end web development for client websites as well as the iSAMS administration portal. Role IIS, C#, SQL, .Net, ASP.NET Core Web APIs, Unit Testing, ASP.NET Web Forms While at eStar built various system components and learnt various technologies.")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -298,7 +298,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 					templ_7745c5c3_Buffer = templ.GetBuffer()
 					defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 				}
-				templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 19)
+				_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div>Development spanned the entire stack, front-end web development for client websites as well as the federated muli-client iSAMS administration portal. I had a number of opportunities at eStar, giving me a wide range of development experience across a number of teams:<ul class=\"list-inside list-disc\"><li>David Jones Project Team</li><li>Working with large multinational clients</li><li>Meeting complex stakeholder goals</li><li>Developing and optimizing for an application operating at a very large scale (~2.5 M Visits/mth)</li><li>Air New Zealand</li><li>Leading meetings with clienta</li><li>Design, developed, and supported a highly custom multi-tenancy external supplier product management system requiring wide-scale refactoring of a large existing e-commerce solution</li><li>On Call Support (24/7)</li><li>Triage client on-call requests</li><li>Addressing and escalate as required</li><li>Managing the response and writing root cause incident reports</li></ul></div>")
 				if templ_7745c5c3_Err != nil {
 					return templ_7745c5c3_Err
 				}
@@ -326,7 +326,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 20)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"text-center font-medium text-gray-800\">I love building and flying First-Person-View (FPV) Quadcopters.</div><div class=\"text-center font-medium text-gray-800\">(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)</div><img src=\"./img/atopthehill.webp\"><div class=\"italic text-center text-gray-600\">Watch out for YouTube compression here!</div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -334,7 +334,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 21)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div class=\"text-xl text-center font-medium text-gray-800\">something more scenic....</div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -342,7 +342,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 22)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" <div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -355,7 +355,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 23)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"hidden\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -365,7 +365,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 24)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div>Currently exploring building fixed wing planes and (sometimes successfully) flying them FPV</div><div>More to come....</div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -384,7 +384,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 				templ_7745c5c3_Buffer = templ.GetBuffer()
 				defer templ.ReleaseBuffer(templ_7745c5c3_Buffer)
 			}
-			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 25)
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -397,7 +397,7 @@ func about(yearSince string, fullDetails bool) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 26)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
