@@ -1,4 +1,7 @@
 ```
+# (first time setup)
+go mod tidy
+
 # Generate templates
 
 templ generate && go run *.go

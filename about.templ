@@ -1,15 +1,15 @@
 package main 
 
 templ about(yearSince string, fullDetails bool) {
-	@box("Me", "intro", "bigger", "") {
+	@box("Me", "intro", "bigger", "", nil) {
 		<div class="w-full text-center py-2">
-			<p class="italic text-gray-600">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p>
+			<p class="italic">(As a Kiwi, this level of self-promotion makes me deeply uncomfortable, but here we go...)</p>
 		</div>
-		<p class="mb-4 text-gray-700">Highly driven full stack software developer working in a professional capacity as a full stack developer for over { yearSince } years.</p>
-		<p class="mb-4 text-gray-700">Extensive experience in implementing complex software solutions, based on varying degrees of specification.</p>
-		<p class="mb-4 text-gray-700">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p>
-		<p class="mb-4 text-gray-700">Passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p>
-		<p class="mb-4 text-gray-700">Excited about continuing to explore the benefits and opportunities of serverless/cloud solutions (in the right places)</p>
+		<p class="mb-4">Highly driven full stack software developer working in a professional capacity as a full stack developer for over { yearSince } years.</p>
+		<p class="mb-4">Extensive experience in implementing complex software solutions, based on varying degrees of specification.</p>
+		<p class="mb-4">Working closely with stakeholders, refining and architecting solutions through to deployment, maintenance and support.</p>
+		<p class="mb-4">Passionate about solving real problems, working with the best tools (or getting there) and improving the overall effectiveness of the organisation and the team</p>
+		<p class="mb-4">Excited about continuing to explore the benefits and opportunities of serverless/cloud solutions (in the right places)</p>
 		<div class="border border-black p-4">
 			<div class="grid grid-cols-3 space-y-2 sm:grid-cols-3 sm:space-x-4">
 				<div class="">
@@ -32,14 +32,14 @@ templ about(yearSince string, fullDetails bool) {
 			</div>
 		</div>
 		if fullDetails {
-			@box("", "link-contact", "smaller", "") {
+			@box("", "link-contact", "smaller", "", nil) {
 				<div class="text-center w-full">
 					<a class="underline text-2xl hover:text-blue-500 font-semibold" href="mailto:ghcumming01@gmail.com">Get in touch</a>
 				</div>
 			}
 		}
 	}
-	@box("Luxury Escapes", "lux", "smaller", "[2022-current]") {
+	@box("Luxury Escapes", "lux", "smaller", "[2022-current]", nil) {
 		Luxury Escapes is one of the leading travel provider in Australia, serving over 86 million customers worldwide it is one of the top travel providers, a rapidly moving high-performance, high-scale, global e-ecommerce platform with startup-like pace of new feature development.
 		@subbox("Tech Used") {
 			NodeJS, React, postgres, Pulumi, AWS, NewRelic, Heroku, BigQuery, Redis, various AWS services, and (after some convincing) a little bit of HTMX
@@ -61,7 +61,7 @@ templ about(yearSince string, fullDetails bool) {
 			</ul>
 		}
 	}
-	@box("Streamliners", "pro", "bigger", "[2019-2021]") {
+	@box("Streamliners", "pro", "bigger", "[2019-2021]", nil) {
 		@subbox("Background") {
 			Streamliners manages several company platforms, including the largest, Healthpathways, which comprises of a responsive websites, publishing platform, and a shared administration and feedback system serving 30 million patients.
 		}
@@ -93,7 +93,7 @@ templ about(yearSince string, fullDetails bool) {
 			Proposing and developing solutions for several company platforms
 		}
 	}
-	@box("eStar", "pro", "bigger", "[2015-2019]") {
+	@box("eStar", "pro", "bigger", "[2015-2019]", nil) {
 		@subbox("Company") {
 			eStar is one of Australasia’s leading e-commerce SaaS platforms creating high-end bespoke e-commerce websites for large international companies.
 		}
@@ -125,14 +125,14 @@ templ about(yearSince string, fullDetails bool) {
 			</div>
 		}
 	}
-	@box("Flying Drones FPV", "fpv", "bigger", "") {
-		<div class="text-center font-medium text-gray-800">I love building and flying First-Person-View (FPV) Quadcopters.</div>
-		<div class="text-center font-medium text-gray-800">(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)</div>
+	@box("Flying Drones FPV", "fpv", "bigger", "", nil) {
+		<div class="text-center font-medium">I love building and flying First-Person-View (FPV) Quadcopters.</div>
+		<div class="text-center font-medium">(The photo of me at the top is after clambering up that mountain to retrieve a lost quad!)</div>
 		<img src="./img/atopthehill.webp"/>
-		<div class="italic text-center text-gray-600">Watch out for YouTube compression here!</div>
+		<div class="italic text-center">Watch out for YouTube compression here!</div>
 		
 		@youtubeLink("Measured Maneuvers", "fxbgoZZdHD4")
-		<div class="text-xl text-center font-medium text-gray-800">something more scenic....</div>
+		<div class="text-xl text-center font-medium">something more scenic....</div>
 		@youtubeLink("Passing through", "CaHXT2S6gJA")
 	
 
@@ -143,7 +143,7 @@ templ about(yearSince string, fullDetails bool) {
 	}
 	<div class="hidden">
 		
-		@box("RC Model Airplanes", "fixed-fpv", "smaller", "") {
+		@box("RC Model Airplanes", "fixed-fpv", "smaller", "", nil) {
 			<div>
 				Currently exploring building fixed wing planes and (sometimes successfully) flying them FPV
 			</div>
@@ -151,7 +151,7 @@ templ about(yearSince string, fullDetails bool) {
 				More to come....
 			</div>
 		}
-		@box("Smart home/Homelab", "home-lab", "smaller", "") {
+		@box("Smart home/Homelab", "home-lab", "smaller", "", nil) {
 			<div>
 				
 			</div>

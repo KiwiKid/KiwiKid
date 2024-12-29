@@ -4,63 +4,80 @@ templ index(yearSince string, fullDetails bool) {
 	@header()
 	<body>
 		<main class="flex-col justify-center text-center font-medium font-mono items-center mt-6">
-			<div class="flex justify-center items-center">
-				<div class="text-center">
-					<div class="text-2xl text-gray-800 p-2">Hey, I'm Greg</div>
-					<div class="text-gray-600 m-2">
-						{ "{ a software developer, football player, homelab enthusiast, and hobby fpv drone pilot } " }
+			<nav class="navbar is-fixed-top">
+				@themer()
+				<div class="navbar-item is-right">
+					<button id="backToTop" class="is-hidden button is-primary is-bold" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;});">
+					&#x2191;
+					</button>
+				</div>
+			</nav>
+			<div class="is-flex is-justify-content-center is-align-items-center">
+				<div class="has-text-centered">
+					<div class="is-size-2 p-2">Hey, I'm Greg</div>
+					<div class="m-2">
+						{ "{ a software developer, football player, homelab, linux and 3d printing enthusiast, and hobby fpv drone pilot } " }
 					</div>
-					<div class="text-gray-600">
+					<div class="">
 						{ "{ based in Christchurch, New Zealand " }
 						[
 						<nz-time></nz-time>
 						] 
 						{ " } " }
 					</div>
-					<div class="text-gray-700 text-lg mt-2">
+					<div class="is-size-4 mt-2">
 						Open to new software development opportunities...
 						Only considering fully/mostly remote roles.
+
 					</div>
-					<a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a>
+					<a class="has-text-weight-bold is-size-2 button is-primary is-bold" href="mailto:ghcumming01@gmail.com">Get in touch</a>
 					<div id="about" class="flex-1">
 					if fullDetails {
 						@about(yearSince, fullDetails)
 					}
 			</div>
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-						@box("", "link-covid", "smaller", ""){
+					<div class=" grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+						@box("", "link-covid", "smaller", "", nil){
 							@link("NZCovidMap", "#nzcovidmap", "internal") {
-								<p class="my-4 text-lg text-gray-500">Covid-19 Locations of Interest published by the NZ Govt</p>
+								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-16 w-16 md:h-24 md:w-24 mx-auto"/>
+								<p class="my-4 text-lg">Covid-19 Locations of Interest published by the NZ Govt</p>
 								<p>Used by over 100,000 Kiwis over the course of the pandemic</p>
 							}
 							@git("https://github.com/KiwiKid/LocationOfInterestExplorer")
+							<p>This simple application show a mobile friendly map of the locations of interest published by the NZ Govt during the pandemic.
+							 It evolved to provide automated to post location specific information to reddit via a node-RED automation</p>
 						}
 					
 						if fullDetails { 
-							@box("", "link-me", "smaller", "") {
+							@box("", "link-me", "smaller", "", nil) {
 								@link("Me", "#intro", "internal")
 								<p>(a bit of background)</p>
 							}
 						}
 
-						@box("", "hx-tomselect", "smaller", ""){
+						@box("", "hx-tomselect", "smaller", "", nil){
 							@link("hx-tomselect", "https://github.com/KiwiKid/hx-tomselect", "external") {
-								<p class="my-4 text-lg text-gray-500">htmx extension that configures TomSelect Multi-select via simple html attributes</p>
-								<p></p>
+								<p class="my-4 text-lg">(wip) htmx extension that configures TomSelect Multi-select via simple html attributes</p>
+								<p>This is a simple htmx extension that allows you to configure TomSelect Multi-select via simple html attributes</p>
 							}
 							@git("https://github.com/KiwiKid/hx-tomselect")
-							<img src="./img/hx-tomselect-demo.gif" height="350" class="mt-3" />
+							<select hx-ext="tomselect" ts-max-options="20" ts-remove-button-title="Remove this Option" multiple>
+								<option value="">N/A</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+							</select>
+							<!--<img src="./img/hx-tomselect-demo.gif" height="350" class="mt-3" />-->
 						}
 
-						@box("", "Sports Team Fines", "smaller", ""){
+						@box("", "Sports Team Fines", "smaller", "", nil){
 							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external") {
-								<p class="my-4 text-lg text-gray-500">Golang application for tracking players, roles, games and seasonal fines for a sports team</p>
+								<p class="my-4 text-lg ">Golang application for tracking players, roles, games and seasonal fines for a sports team</p>
 							}
 							@git("https://github.com/KiwiKid/baileys-hammer")
 							<a href="https://sports-team-fines.fly.dev" target="_"><img src="./img/fines.png" height="350" class="mt-3" /></a>
 						}
 
-						@box("", "Christchurch Water Reporter", "smaller", ""){
+						@box("", "Christchurch Water Reporter", "smaller", "", nil){
 							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external") {
 								<p>A experiment in mapping the average water usage in Christchurch, New Zealand</p>
 							}
@@ -81,20 +98,18 @@ templ index(yearSince string, fullDetails bool) {
 			@nzcovidmap()
 			@chchWaterReporter()
 			if fullDetails {
-				@box("Passionate football player", "hopscotch", "bigger", "") {
+				@box("Passionate football player", "hopscotch", "bigger", "", nil) {
 					<div>
 						<p>I caption a Sunday league team recently promoted to the top division and the Wednesday indoor football team i started recently when 23 games unbeaten (as at 26/9/21) in their third season in the competition. </p>
 						<p>I play as much as injuries allow 🤕</p>
 					</div>
 				}
 			}
+				
 			
-			<button id="backToTop" class="hidden fixed bottom-5 right-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer" onclick="window.scrollTo({top: 0, behavior: &#39;smooth&#39;});">
-				&#x2191;
-			</button>
 			<div style="height: 1600px mb-12"></div>
 			if fullDetails {
-				@box("", "link-contact", "smaller", ""){
+				@box("", "link-contact", "smaller", "", nil){
 					<div class="py-4"><div class="text-3xl text-center"></div><div class="border border-black p-4"><div class="text-center">If you made it this far, you must be keen.</div><div class="text-center w-full"><a class="underline text-2xl" href="mailto:ghcumming01@gmail.com">Get in touch</a></div></div></div>
 				}
 			}
@@ -103,9 +118,9 @@ templ index(yearSince string, fullDetails bool) {
 
 						window.addEventListener('scroll', () => {
 							if (window.pageYOffset > 100) {
-								backToTopButton.classList.remove('hidden');
+								backToTopButton.classList.remove('is-hidden');
 							} else {
-								backToTopButton.classList.add('hidden');
+								backToTopButton.classList.add('is-hidden');
 							}
 						});
 
