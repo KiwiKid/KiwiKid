@@ -9,9 +9,9 @@ templ box(title string, divId string, size string, subtitle string, titleIcon te
 		if size == "smaller" {
 			class="container is-max-desktop p-5 mt-4 "
 		} else if size == "bigger" {
-			class="container is-max-desktop is-fullheight has-background-dark  has-text-primary-light p-5 mt-4"
+			class="container is-max-desktop is-fullheight  has-text-primary-light p-5 mt-4 col-span-2"
 		} else if size == "tiny" {
-			class="column is-one-third mt-5 pt-5 has-background-dark has-text-primary-light p-5	mt-4 "
+			class="column is-one-third mt-5 pt-5  has-text-primary-light p-5	mt-4 "
 		} else {
 			class="has-text-danger has-background-danger has-text-primary-light	"
 		} 
@@ -53,11 +53,11 @@ templ subbox(title string) {
 }
 
 templ link(title string, href string, linkType string) {
-	<a class="button is-fullwidth is-white p-5" href={ templ.SafeURL(href) }>
+	<a class="button is-flex p-5 is-black" href={ templ.SafeURL(href) }>
 		if linkType == "external" {
 			@externalLink("200px", "200px")
 		} else if linkType == "external-smaller" {
-			@externalLink("100px", "100px")
+			@externalLink("100px", "200px")
 		} else if linkType == "internal" {
 			@downArrow()
 		} else {

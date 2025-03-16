@@ -29,7 +29,7 @@ func covidIcon() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<figure class=\"\"><img src=\"./img/covid19/icon-512x512.webp\" alt=\"Locations of Interest Explorer Icon\"></figure>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<figure class=\"\"><img src=\"./img/covid19/icon-512x512.webp\" alt=\"Locations of Interest Explorer Icon\" class=\"h-16 w-16 md:h-24 md:w-24 mx-auto\"></figure>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -70,7 +70,7 @@ func nzcovidmap() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><p>Over the course of the pandemic, the NZCovidMap reached over 200,000 Kiwis across New Zealand, with a peak of 15,000 daily unique visitors. This tool provided people with a mobile-friendly view of Covid-19 Locations of Interest published by the NZ Ministry of Health. </p><ul><li>- 4.5k users in the first month</li><li>- Circle-based location selection method</li><li>A Mobile-friendly map view</li><li>- Location specific url pathing query params + \"share link to location\"</li><li>- Generation of location-specific meta screenshots for engaging social media preview images.</li><li>- Reddit Integration - Including Auto-Generate & Update of a \"Location of Interest summary\" for each subreddit & auto-post/update posts in relevant subreddit</li></ul></div><div class=\"flex justify-center\"><img class=\"rounded-lg shadow-lg\" src=\"./img/covid19/covid_desktop.webp\" alt=\"NZCovidMap Screenshot\"></div>")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div><p>During the pandemic, the New Zealand Ministry of Health published the locations of interest, the locations of interest were published via a address list, but wasn't mapped, searchable, sharable, or mobile-friendly (fair enough, they were busy!).  I identified the need and published this app to provide a mobile-friendly view of these locations of interest. </p><p>To spread awareness, i extended the app to include a reddit bot that would post to relevant subreddits when a new location was added or updated.</p><p>With these efforts, the NZCovidMap reached over 200,000 Kiwis across New Zealand, with a peak of 15,000 daily unique visitors. </p><ul><li>- 4.5k users in the first month</li><li>- 15k daily unique visitors</li><li>- 200k total visitors</li><li>- Circle-based location selection method</li><li>A Mobile-friendly map view</li><li>- Location specific url pathing query params + \"share link to location\"</li><li>- Generation of location-specific meta screenshots for engaging social media preview images.</li><li>- Reddit Integration - Including Auto-Generate & Update of a \"Location of Interest summary\" for each subreddit & auto-post/update posts in relevant subreddit</li></ul></div><div class=\"flex justify-center\"><img class=\"rounded-lg shadow-lg\" src=\"./img/covid19/covid_desktop.webp\" alt=\"NZCovidMap Screenshot\"></div>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

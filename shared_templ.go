@@ -48,7 +48,7 @@ func box(title string, divId string, size string, subtitle string, titleIcon tem
 			return templ_7745c5c3_Err
 		}
 		if size == "bigger" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"container is-max-desktop is-fullheight has-background-dark  has-text-primary-light p-5 mt-4\"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"container is-max-desktop is-fullheight  has-text-primary-light p-5 mt-4 col-span-2\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -58,7 +58,7 @@ func box(title string, divId string, size string, subtitle string, titleIcon tem
 			return templ_7745c5c3_Err
 		}
 		if size == "tiny" {
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"column is-one-third mt-5 pt-5 has-background-dark has-text-primary-light p-5\tmt-4 \"")
+			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(" class=\"column is-one-third mt-5 pt-5  has-text-primary-light p-5\tmt-4 \"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -229,7 +229,7 @@ func link(title string, href string, linkType string) templ.Component {
 			templ_7745c5c3_Var7 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<a class=\"button is-fullwidth is-white p-5\" href=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<a class=\"button is-flex p-5 is-black\" href=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -248,7 +248,7 @@ func link(title string, href string, linkType string) templ.Component {
 				return templ_7745c5c3_Err
 			}
 		} else if linkType == "external-smaller" {
-			templ_7745c5c3_Err = externalLink("100px", "100px").Render(ctx, templ_7745c5c3_Buffer)
+			templ_7745c5c3_Err = externalLink("100px", "200px").Render(ctx, templ_7745c5c3_Buffer)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

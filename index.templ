@@ -13,10 +13,10 @@ templ index(yearSince string, fullDetails bool) {
 				</div>
 			</nav>
 			<div class="is-flex is-justify-content-center is-align-items-center">
-				<div class="has-text-centered">
+				<div class="has-text-centered  is-size-4">
 					<div class="is-size-2 p-2">Hey, I'm Greg</div>
 					<div class="m-2">
-						{ "{ a software developer, football player, homelab, linux and 3d printing enthusiast, and hobby fpv drone pilot } " }
+						{ "{ a software developer, homelab, linux, 3d printing and fpv drone enthusiast } " }
 					</div>
 					<div class="">
 						{ "{ based in Christchurch, New Zealand " }
@@ -25,68 +25,102 @@ templ index(yearSince string, fullDetails bool) {
 						] 
 						{ " } " }
 					</div>
+					@aboutSummary(yearSince)
+					@techSummary()
 					<div class="is-size-4 mt-2">
 						Open to new software development opportunities...
 						Only considering fully/mostly remote roles.
 
 					</div>
-					<a class="has-text-weight-bold is-size-2 button is-primary is-bold" href="mailto:ghcumming01@gmail.com">Get in touch</a>
+					<div class="is-flex columns is-centered" >
+						@git("https://github.com/KiwiKid")
+
+						<a href="https://www.linkedin.com/in/greg-cumming-a0411b16a/" target="_" class="m-4 button is-white is-flex is-align-items-center">
+							<span class="icon-text">
+							<span class="icon">
+								<svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"/><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"/></g></svg>
+							</span>
+							<span>Home</span>
+							</span>
+						</a>
+					</div>
 					<div id="about" class="flex-1">
 					if fullDetails {
 						@about(yearSince, fullDetails)
 					}
-			</div>
-					<div class=" grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-						@box("", "link-covid", "smaller", "", nil){
+					</div>
+					<div class="flex flex-wrap gap-4 mt-6">
+						<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+							@box("", "link-covid", "bigger", "", nil){
 							@link("NZCovidMap", "#nzcovidmap", "internal") {
 								<img src="./img/covid19/icon-512x512.webp" alt="Locations of Interest Explorer Icon" class="h-16 w-16 md:h-24 md:w-24 mx-auto"/>
 								<p class="my-4 text-lg">Covid-19 Locations of Interest published by the NZ Govt</p>
 								<p>Used by over 100,000 Kiwis over the course of the pandemic</p>
 							}
 							@git("https://github.com/KiwiKid/LocationOfInterestExplorer")
+
 							<p>This simple application show a mobile friendly map of the locations of interest published by the NZ Govt during the pandemic.
 							 It evolved to provide automated to post location specific information to reddit via a node-RED automation</p>
 						}
+						</div>
 					
 						if fullDetails { 
-							@box("", "link-me", "smaller", "", nil) {
-								@link("Me", "#intro", "internal")
-								<p>(a bit of background)</p>
-							}
-						}
-
-						@box("", "hx-tomselect", "smaller", "", nil){
-							@link("hx-tomselect", "https://github.com/KiwiKid/hx-tomselect", "external") {
-								<p class="my-4 text-lg">(wip) htmx extension that configures TomSelect Multi-select via simple html attributes</p>
-								<p>This is a simple htmx extension that allows you to configure TomSelect Multi-select via simple html attributes</p>
-							}
-							@git("https://github.com/KiwiKid/hx-tomselect")
-							<select hx-ext="tomselect" ts-max-options="20" ts-remove-button-title="Remove this Option" multiple>
-								<option value="">N/A</option>
-								<option value="1">Option 1</option>
-								<option value="2">Option 2</option>
-							</select>
-							<!--<img src="./img/hx-tomselect-demo.gif" height="350" class="mt-3" />-->
-						}
-
-						@box("", "Sports Team Fines", "smaller", "", nil){
-							@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external") {
-								<p class="my-4 text-lg ">Golang application for tracking players, roles, games and seasonal fines for a sports team</p>
-							}
-							@git("https://github.com/KiwiKid/baileys-hammer")
-							<a href="https://sports-team-fines.fly.dev" target="_"><img src="./img/fines.png" height="350" class="mt-3" /></a>
-						}
-
-						@box("", "Christchurch Water Reporter", "smaller", "", nil){
-							@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external") {
-								<p>A experiment in mapping the average water usage in Christchurch, New Zealand</p>
-							}
-							<a href="https://chch-water-reporter.vercel.app" target="_"><img src="./img/chch-reporting.PNG" alt="a image of christchurch with circles representing how much water each address uses" height="350" class="mt-3" /></a>
-							<div class="flex">
-							@git("https://github.com/KiwiKid/chch-water-reporter")
-							@option("#chchwaterreporter", "More Info")
+							<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+								@box("", "link-me", "bigger", "", nil) {
+									@link("Me", "#intro", "internal")
+									<p>(a bit of background)</p>
+								}
 							</div>
 						}
+
+						<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+							@box("", "openscadgen", "bigger", "", nil) {
+								@link("OpenSCADGen", "https://github.com/KiwiKid/OpenSCADGen", "external") {
+									<p>A cli tool for generating OpenSCAD 3d models from an .scad file and .toml config file</p>
+								}
+								@git("https://github.com/KiwiKid/OpenSCADGen")
+							}
+						</div>
+
+						<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+							@box("", "Sports Team Fines", "bigger", "", nil){
+								@link("Sports Team Fines", "https://sports-team-fines.fly.dev/", "external") {
+									<p class="my-4 text-lg ">Golang application for tracking players, roles, games and seasonal fines for a sports team</p>
+								}
+								@git("https://github.com/KiwiKid/baileys-hammer")
+								<a href="https://sports-team-fines.fly.dev" target="_"><img src="./img/fines.png" height="350" class="mt-3" /></a>
+							}
+						</div>
+
+						<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+							@box("", "hx-tomselect", "bigger", "", nil){
+								@link("hx-tomselect", "https://github.com/KiwiKid/hx-tomselect", "external") {
+									<p class="my-4 text-lg">(wip) htmx extension that configures TomSelect Multi-select via simple html attributes</p>
+									<p>This is a simple htmx extension that allows you to configure TomSelect Multi-select via simple html attributes</p>
+								}
+								@git("https://github.com/KiwiKid/hx-tomselect")
+								<select hx-ext="tomselect" ts-max-options="20" ts-remove-button-title="Remove this Option" multiple>
+									<option value="">N/A</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+								</select>
+								<!--<img src="./img/hx-tomselect-demo.gif" height="350" class="mt-3" />-->
+							}
+						</div>
+
+						<div class="w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)]">
+							@box("", "Christchurch Water Reporter", "bigger", "", nil){
+								@link("Christchurch Water Reporter", "https://chch-water-reporter.vercel.app", "external") {
+									<p>A experiment in mapping the average water usage in Christchurch, New Zealand</p>
+								}
+								@option("#chchwaterreporter", "More Info")
+
+								<a href="https://chch-water-reporter.vercel.app" target="_"><img src="./img/chch-reporting.PNG" alt="a image of christchurch with circles representing how much water each address uses" height="350" class="mt-3" /></a>
+								<div class="flex">
+								@git("https://github.com/KiwiKid/chch-water-reporter")
+								</div>
+							}
+						</div>
 
 						<!-- @box("", "link-fpv", "smaller", ""){
 							@link("FPV", "#fpv", "")
