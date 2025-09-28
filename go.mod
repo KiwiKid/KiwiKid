@@ -1,5 +1,5 @@
 module github.com/KiwiKid/KiwiKid
 
-go 1.21.1
+go 1.23.0
 
-require github.com/a-h/templ v0.2.793
+require github.com/a-h/templ v0.3.943
